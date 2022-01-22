@@ -1,0 +1,1446 @@
+/*HEADDER*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    
+    align-items:stretch;
+    text-decoration: none;
+    }
+
+        #tituloHeader{
+        /* Imagen de fondo header*/
+        background-image: url("../img/salon\ headder\ 2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(0.5px);
+        background-position: center;
+
+        /*Titulo h1 header*/
+        font-family: 'Corinthia', cursive;
+        color: blanchedalmond ;
+        filter: none;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+        text-align: center;
+    }
+  
+    a { color: inherit; } 
+
+    /*NAV*/
+
+    header div nav {
+        background-position: bottom;
+    }
+    nav{
+        font-family: 'Corinthia', cursive;
+        background-color:#BF9F93;
+        text-align: center;
+    }
+    nav ul{
+        display:flex;
+        justify-content: space-around;
+        height: 100%;
+        list-style: none;
+        }
+    nav ul li{
+        width: 25%;
+        height: 100px;
+    }
+    nav ul li a{
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+    nav ul li a:hover{
+        background-color:#F2DDD0;      
+    }
+
+    /*Media Qery Header Index*/
+    @media only screen and (max-width:468px){
+        header {
+            height: 32vh
+        }
+        #tituloHeader{
+        font-size: 5vh;
+        font-weight: 60px;
+        }
+        nav{height: 20vh;
+            font-size:3.2vh;
+        }
+        nav ul{
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+    }
+}
+    @media only screen and (min-width:468px){
+        header {
+            height: 32vh
+        }
+        #tituloHeader{
+        font-size: 5vh;
+        font-weight: 60px;
+        }
+        nav{height: 20vh;
+            font-size:3.5vh;
+        }
+        nav ul{
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+    }
+    @media only screen and (min-width:600px){
+        header {
+            height: 47vh
+        }
+        #tituloHeader{
+        font-size: 8vh;
+        font-weight: 60px;
+        }
+        nav{height: 28vh;
+            font-size:4.2vh;
+        }
+        nav ul{
+            flex-direction: column;
+            text-align: center;
+            align-items: center;}
+    }
+    @media only screen and (min-width:768px){
+    
+        header {
+            height: 32vh
+        }
+        #tituloHeader{
+        font-size: 5vh;
+        font-weight: 60px;
+        }
+        nav{height: 20vh;
+            font-size:3.2vh;
+        }
+        nav ul{
+            flex-direction: column;
+            text-align: center;
+            align-items: center;}
+    }
+    @media only screen and (min-width:992px){
+        header {
+            height: 32vh
+        }
+        #tituloHeader{
+        font-size: 10vh;
+        font-weight: 70px;
+        }
+        nav{height: 8vh;
+            font-size:3.2vh;
+        }
+        nav ul{
+            flex-direction: row;
+            text-align: center;
+            align-items: flex-start;
+            font-size: 7vh;
+            justify-content: center;
+            
+        }
+    }
+
+/*MAIN INDEX*/
+
+
+#indexMain{
+    display: grid;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+/*Carrusel con imagenes de trabajos 100% ancho*/
+#indexMainDivUno{
+    background-color:#F2DDD0 ;
+    grid-area: div;
+}
+
+/*Box izquierda de la pantalla con info de la funcion de la empresa*/
+    #sectionUno{
+    background-color: #F2F2F2;
+    grid-area: section;
+    }
+/*mapa del local*/
+    #articleUno{
+    background-color:#F2F2F2; 
+    grid-area: article;
+    align-items: center;
+    text-align: center;
+    
+}
+   
+/*capturas a modo de carrusel de las diferentes experiencias y opiniones de clientes*/
+#asideUno{    
+    background-color: #9392A6;
+    grid-area: aside;
+    }
+
+    /*Chat flotante whatsapp*/
+    .chat{
+        width: 45px;
+        height: 45px;
+        position: fixed;
+        right: 18px;
+        bottom: 18px;
+    }
+    .chat img {
+        width: 45px;
+        position: sticky;
+    }
+/*Media Qery Main Index*/
+    @media only screen and (max-width:468px){
+        #indexMain{
+            height: 1375px;
+            grid-template-rows: 300px 450px 300px 300px; 
+            grid-template-columns: 100%;
+            gap:0.5rem;
+            grid-template-areas:        "div"
+                                    "section"
+                                    "article"
+                                    "aside";
+        }
+    }
+    @media only screen and (min-width:468px){
+        #indexMain{
+            height: 1272px;
+            grid-template-rows: 300px 350px 300px 300px; 
+            grid-template-columns: 100%;
+            gap:0.5rem;
+            grid-template-areas:        "div"
+                                    "section"
+                                    "article"
+                                    "aside";
+        }
+    }
+    @media only screen and (min-width:600px){
+        #indexMain{
+            height: 1175px;
+            grid-template-rows: 300px 250px 300px 300px; 
+            grid-template-columns: 100%;
+            gap:0.5rem;
+            grid-template-areas:        "div"
+                                    "section"
+                                    "article"
+                                    "aside";
+        }
+        
+    }
+    @media only screen and (min-width:768px){
+    
+        #indexMain{
+            height: 1272px;
+            grid-template-rows: 300px 350px 300px 300px; 
+            grid-template-columns: 100%;
+            gap:0.5rem;
+            grid-template-areas:        "div"
+                                    "section"
+                                    "article"
+                                    "aside";
+            }
+    }
+    @media only screen and (min-width:992px){
+        #indexMain{
+            height: 970px;
+            grid-template-rows: 300px 350px 300px; 
+            grid-template-columns: 50% 50%;
+            gap:0.5rem;
+            grid-template-areas:"div div"
+                                "section article"
+                                "aside aside";
+        }
+        
+    }
+    
+/*FOOT*/
+ /*footer con redes, info de contactos, e info afip*/
+footer{
+    background-color:#F2F2F2;
+    height: 200px;
+    color:#B0B0BF;
+}
+
+}
+.footer-social{
+    display: inline-block
+}
+.footer-social ul li{
+    display:flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+}
+
+
+
+/*Media Qery Footer*/
+@media only screen and (max-width:468px){
+#faceFoot, #instaFoot, #twitFoot{
+    width: 45px;
+    height: 45px;
+    margin: 0px;
+    padding: 4px;
+    }
+}
+@media only screen and (min-width:468px){
+    #faceFoot, #instaFoot, #twitFoot{
+        width: 45px;
+        height: 45px;
+        margin: 0px;
+        padding: 4px;
+    }
+}
+@media only screen and (min-width:600px){
+    #faceFoot, #instaFoot, #twitFoot{
+        width: 45px;
+        height: 45px;
+        margin: 0px;
+        padding: 4px;
+    }
+    
+}
+@media only screen and (min-width:768px){
+    #faceFoot, #instaFoot, #twitFoot{
+        width: 45px;
+        height: 45px;
+        margin: 0px;
+        padding: 4px;
+    }
+
+   
+}
+@media only screen and (min-width:992px){
+    #faceFoot, #instaFoot, #twitFoot{
+        width: 45px;
+        height: 45px;
+        margin: 0px;
+        padding: 4px;
+    }
+}
+
+/*Main Nosotros*/
+        #nosotrosMain{
+            
+            width: 100%;
+            display: grid;
+            
+            
+        }
+
+        /*Breve reseña historica de la empresa*/
+        #nosotrosMain section{
+            background-color: #F2F2F2;
+            font-family: 'Lato', sans-serif,'Courier New', Courier, monospace;
+            font-size: 20px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-right: 0px;
+            margin-left: 0px;
+            border: 3px solid #735149;
+            padding: 1px;
+            grid-area: section;
+        }
+        /*Video*/
+        #nosotrosMainDiv{
+            border:solid,2px,blue;
+            grid-area: div;
+        }
+
+    /*Media Qery Main Nosotros*/
+        @media only screen and (max-width:468px){
+            #nosotrosMain{
+                height: 570px;
+                grid-template-rows: 300px 450px; 
+                grid-template-columns: 100%;
+                gap:0.5rem;
+                grid-template-areas:"section"
+                                    "div";
+            }
+            #nosotrosMainDiv section{
+                height: 295px;
+                width: 100%;
+            }
+            #nosotrosMainDiv iframe{
+                height: 265px;
+                width: 100%;
+                text-align: center;
+                align-items: stretch;
+                
+                
+            }
+        }
+        @media only screen and (min-width:468px){
+            #nosotrosMain{
+                height: 570px;
+                grid-template-rows: 300px 450px; 
+                grid-template-columns: 100%;
+                gap:0.5rem;
+                grid-template-areas:"section"
+                                    "div";
+            }
+            #nosotrosMainDiv section{
+                height: 295px;
+                width: 100%;
+            }
+            #nosotrosMainDiv iframe{
+                height: 265px;
+                width: 100%;
+                text-align: center;
+                align-items: stretch;
+                
+            }
+    
+        }
+        @media only screen and (min-width:600px){
+            #nosotrosMain{
+                height: 650px;
+                grid-template-rows: 300px 450px; 
+                grid-template-columns: 100%;
+                gap:0.5rem;
+                grid-template-areas:"section"
+                                    "div";
+            }
+            #nosotrosMainDiv section{
+                height: 295px;
+                width: 100%;
+            }
+            #nosotrosMainDiv iframe{
+                height: 340px;
+                width: 100%;
+                text-align: center;
+                align-items: stretch;
+                
+            }
+            
+        }
+        @media only screen and (min-width:768px){
+            #nosotrosMain{
+                height: 570px;
+                grid-template-rows: 300px 450px; 
+                grid-template-columns: 100%;
+                gap:0.5rem;
+                grid-template-areas:"section"
+                                    "div";
+            }
+            #nosotrosMainDiv section{
+                height: 295px;
+                width: 100%;
+            }
+            #nosotrosMainDiv iframe{
+                height: 265px;
+                width: 100%;
+                text-align: center;
+                align-items: stretch;
+                
+            }
+        
+           
+        }
+        @media only screen and (min-width:992px){
+            #nosotrosMain{
+                height: 825px;
+                grid-template-rows: 300px 450px; 
+                grid-template-columns: 100%;
+                gap:0.5rem;
+                grid-template-areas:"section"
+                                    "div";
+            }
+            #nosotrosMainDiv section{
+                height: 295px;
+                width: 100%;
+            }
+            #nosotrosMainDiv iframe{
+                height: 520px;
+                width: 100%;
+                text-align: center;
+                align-items: stretch;
+                
+            }
+            
+        }
+
+/*MAIN SERVICIOS*/
+
+        #serviciosMain{
+            display: grid;
+            width: 100%;
+        }
+          
+        
+         /*TEXTOS PARA LINKS CON DISTINTA INFO SOBRE CADA SERVICIO*/
+        
+        #serviciosMainDivDos{
+            display:grid;
+            
+    }
+        #eventosServ{
+            background-image: url("../img/img5.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            filter: blur(2px);
+            background-position: center;
+            grid-area: eventos;
+            align-items: center;
+            text-align: center;
+        
+        }
+        
+        #comercialServ{
+            background-image: url("../img/img8.jpeg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            filter: blur(4px);
+            background-position: center;
+            grid-area: comercial;
+        }
+       
+         #productosServ{
+            background-image: url("../img/img13.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            filter: blur(2px);
+            background-position: center;
+            grid-area: productos;
+        }
+        #otrosServ{
+            background-image: url("../img/img12.jpg");
+            background-repeat: no-repeat;
+            background-size:cover;
+            filter: blur(2px);
+            background-position: center;
+            grid-area: otros;
+        }
+
+    /*Media Qery Main Servicios*/
+    @media only screen and (max-width:468px){
+        #serviciosMainDivDos{
+            height: 705px;
+            grid-template-rows: 175px 175px 175px 175px; 
+            grid-template-columns: 100%;
+            gap:0.2rem;
+            grid-template-areas:
+                                "eventos"
+                                "comercial"
+                                "productos"
+                                "otros";
+    }
+        #h3Events{font-family: 'Corinthia', cursive;
+        font-size: 80px;
+        line-height: 120px;
+        color: cornsilk;
+        filter: blur(0);
+        grid-area: eventos;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+        
+    }
+        #h3Comercial{font-family: 'Corinthia', cursive;
+        font-size: 80px;
+        line-height: 120px;
+        color: cornsilk;
+        filter: blur(0);
+        grid-area: comercial;
+        text-align: center;
+        align-self: center;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+    }
+        #h3Productos{font-family: 'Corinthia', cursive;
+        font-size: 80px;
+        line-height: 120px;
+        color: cornsilk;
+        filter: blur(0);
+        grid-area: productos;
+        text-align: center;
+        align-self: center;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+                }
+        #h3Otros{font-family: 'Corinthia', cursive;
+            font-size: 80px;
+            line-height: 120px;
+            color: cornsilk;
+            filter: blur(0);
+            grid-area: otros;
+            text-align: center;
+            align-self: center;
+            text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+            }
+}
+@media only screen and (min-width:468px){
+    #serviciosMainDivDos{
+        height: 705px;
+        grid-template-rows: 175px 175px 175px 175px; 
+        grid-template-columns: 100%;
+        gap:0.2rem;
+        grid-template-areas:
+                            "eventos"
+                            "comercial"
+                            "productos"
+                            "otros";
+}
+    #h3Events{font-family: 'Corinthia', cursive;
+    font-size: 80px;
+    line-height: 120px;
+    color: cornsilk;
+    filter: blur(0);
+    grid-area: eventos;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+    
+}
+    #h3Comercial{font-family: 'Corinthia', cursive;
+    font-size: 80px;
+    line-height: 120px;
+    color: cornsilk;
+    filter: blur(0);
+    grid-area: comercial;
+    text-align: center;
+    align-self: center;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+}
+    #h3Productos{font-family: 'Corinthia', cursive;
+    font-size: 80px;
+    line-height: 120px;
+    color: cornsilk;
+    filter: blur(0);
+    grid-area: productos;
+    text-align: center;
+    align-self: center;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+            }
+    #h3Otros{font-family: 'Corinthia', cursive;
+        font-size: 80px;
+        line-height: 120px;
+        color: cornsilk;
+        filter: blur(0);
+        grid-area: otros;
+        text-align: center;
+        align-self: center;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+        }
+    
+}
+@media only screen and (min-width:600px){
+    #serviciosMainDivDos{
+        height: 710px;
+        grid-template-rows: 175px 175px 175px 175px; 
+        grid-template-columns: 100%;
+        gap:0.2rem;
+        grid-template-areas:
+                            "eventos"
+                            "comercial"
+                            "productos"
+                            "otros";
+}
+    #h3Events{font-family: 'Corinthia', cursive;
+    font-size: 80px;
+    line-height: 120px;
+    color: cornsilk;
+    filter: blur(0);
+    grid-area: eventos;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+    
+}
+    #h3Comercial{font-family: 'Corinthia', cursive;
+    font-size: 80px;
+    line-height: 120px;
+    color: cornsilk;
+    filter: blur(0);
+    grid-area: comercial;
+    text-align: center;
+    align-self: center;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+}
+    #h3Productos{font-family: 'Corinthia', cursive;
+    font-size: 80px;
+    line-height: 120px;
+    color: cornsilk;
+    filter: blur(0);
+    grid-area: productos;
+    text-align: center;
+    align-self: center;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+            }
+    #h3Otros{font-family: 'Corinthia', cursive;
+        font-size: 80px;
+        line-height: 120px;
+        color: cornsilk;
+        filter: blur(0);
+        grid-area: otros;
+        text-align: center;
+        align-self: center;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+        }
+    
+}
+@media only screen and (min-width:768px){
+    #serviciosMainDivDos{
+        height: 705px;
+        grid-template-rows: 175px 175px 175px 175px; 
+        grid-template-columns: 100%;
+        gap:0.2rem;
+        grid-template-areas:
+                            "eventos"
+                            "comercial"
+                            "productos"
+                            "otros";
+}
+    #h3Events{font-family: 'Corinthia', cursive;
+    font-size: 80px;
+    line-height: 120px;
+    color: cornsilk;
+    filter: blur(0);
+    grid-area: eventos;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+    
+}
+    #h3Comercial{font-family: 'Corinthia', cursive;
+    font-size: 80px;
+    line-height: 120px;
+    color: cornsilk;
+    filter: blur(0);
+    grid-area: comercial;
+    text-align: center;
+    align-self: center;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+}
+    #h3Productos{font-family: 'Corinthia', cursive;
+    font-size: 80px;
+    line-height: 120px;
+    color: cornsilk;
+    filter: blur(0);
+    grid-area: productos;
+    text-align: center;
+    align-self: center;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+            }
+    #h3Otros{font-family: 'Corinthia', cursive;
+        font-size: 80px;
+        line-height: 120px;
+        color: cornsilk;
+        filter: blur(0);
+        grid-area: otros;
+        text-align: center;
+        align-self: center;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+        }
+
+   
+}
+@media only screen and (min-width:992px){
+    #serviciosMainDivDos{
+        height: 710px;
+        grid-template-rows: 175px 175px 175px 175px; 
+        grid-template-columns: 100%;
+        gap:0.2rem;
+        grid-template-areas:
+                            "eventos"
+                            "comercial"
+                            "productos"
+                            "otros";
+}
+    #h3Events{font-family: 'Corinthia', cursive;
+    font-size: 80px;
+    line-height: 120px;
+    color: cornsilk;
+    filter: blur(0);
+    grid-area: eventos;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+    
+}
+    #h3Comercial{font-family: 'Corinthia', cursive;
+    font-size: 80px;
+    line-height: 120px;
+    color: cornsilk;
+    filter: blur(0);
+    grid-area: comercial;
+    text-align: center;
+    align-self: center;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+}
+    #h3Productos{font-family: 'Corinthia', cursive;
+    font-size: 80px;
+    line-height: 120px;
+    color: cornsilk;
+    filter: blur(0);
+    grid-area: productos;
+    text-align: center;
+    align-self: center;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+            }
+    #h3Otros{font-family: 'Corinthia', cursive;
+        font-size: 80px;
+        line-height: 120px;
+        color: cornsilk;
+        filter: blur(0);
+        grid-area: otros;
+        text-align: center;
+        align-self: center;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+        }
+    
+}
+
+/* MAIN GALERIA*/
+    #galeriaMain section{
+        display: grid;
+        height: auto;
+        width: 100%;
+        
+
+    }
+#galeriaMain section div{
+    max-width: 100%;
+}
+@media only screen and (max-width:468px){
+#galeriaMain section{
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 190px 190px 190px 230px 190px;
+    grid-template-areas: "foto1 foto2"
+                        "foto3 foto5"
+                        "foto3 foto6"
+                        "foto7 foto7"
+                        "foto8 foto9";
+    gap: 10px;
+    padding: 2px;
+}
+#img1{grid-area: foto1;
+    background-color: burlywood;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+      align-self: center;
+      background-position:center;
+}
+#img2{
+    grid-area: foto2;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+      align-self: center;
+      background-position:center;
+}
+#img6{grid-area: foto3;
+        
+      width: 100%;
+      height: 100%;
+      justify-items: center;
+      align-self: center;
+      background-position:center;
+}
+#img9{grid-area: foto5;
+        
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-self: center;
+    background-position:center;
+}
+#img3{grid-area: foto6;
+        
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-self: center;
+    background-position:center;
+}
+#img11{grid-area: foto7;
+        
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-self: center;
+    background-position:center;
+}
+#img4{grid-area: foto8;
+        
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-self: center;
+    background-position:center;
+}
+#img7{grid-area: foto9;
+        
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-self: center;
+    background-position:center;
+}
+}
+@media only screen and (min-width:468px){
+    #galeriaMain section{
+        grid-template-columns: 49% 49%;
+        grid-template-rows: 190px 190px 190px 230px 190px;
+        grid-template-areas: "foto1 foto2"
+                            "foto3 foto5"
+                            "foto3 foto6"
+                            "foto7 foto7"
+                            "foto8 foto9";
+        gap: 10px;
+        padding: 2px;
+    }
+    #img1{grid-area: foto1;
+        background-color: burlywood;
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+          align-self: center;
+          background-position:center;
+    }
+    #img2{
+        grid-area: foto2;
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+          align-self: center;
+          background-position:center;
+    }
+    #img6{grid-area: foto3;
+            
+          width: 100%;
+          height: 100%;
+          justify-items: center;
+          align-self: center;
+          background-position:center;
+    }
+    #img9{grid-area: foto5;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img3{grid-area: foto6;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img11{grid-area: foto7;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img4{grid-area: foto8;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img7{grid-area: foto9;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    
+}
+@media only screen and (min-width:600px){
+    #galeriaMain section{
+        grid-template-columns: 49% 49%;
+        grid-template-rows: 190px 190px 190px 230px 190px;
+        grid-template-areas: "foto1 foto2"
+                            "foto3 foto5"
+                            "foto3 foto6"
+                            "foto7 foto7"
+                            "foto8 foto9";
+        gap: 10px;
+        padding: 2px;
+    }
+    #img1{grid-area: foto1;
+        background-color: burlywood;
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+          align-self: center;
+          background-position:center;
+    }
+    #img2{
+        grid-area: foto2;
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+          align-self: center;
+          background-position:center;
+    }
+    #img6{grid-area: foto3;
+            
+          width: 100%;
+          height: 100%;
+          justify-items: center;
+          align-self: center;
+          background-position:center;
+    }
+    #img9{grid-area: foto5;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img3{grid-area: foto6;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img11{grid-area: foto7;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img4{grid-area: foto8;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img7{grid-area: foto9;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    
+}
+@media only screen and (min-width:768px){
+    #galeriaMain section{
+        grid-template-columns: 49% 49%;
+        grid-template-rows: 190px 190px 190px 230px 190px;
+        grid-template-areas: "foto1 foto2"
+                            "foto3 foto5"
+                            "foto3 foto6"
+                            "foto7 foto7"
+                            "foto8 foto9";
+        gap: 10px;
+        padding: 2px;
+    }
+    #img1{grid-area: foto1;
+        background-color: burlywood;
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+          align-self: center;
+          background-position:center;
+    }
+    #img2{
+        grid-area: foto2;
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+          align-self: center;
+          background-position:center;
+    }
+    #img6{grid-area: foto3;
+            
+          width: 100%;
+          height: 100%;
+          justify-items: center;
+          align-self: center;
+          background-position:center;
+    }
+    #img9{grid-area: foto5;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img3{grid-area: foto6;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img11{grid-area: foto7;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img4{grid-area: foto8;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img7{grid-area: foto9;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+
+   
+}
+@media only screen and (min-width:992px){
+    #galeriaMain{
+        height: 630px;
+    }
+    #galeriaMain section{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 200px 200px 200px;
+        grid-template-areas: "foto1 foto2 foto3"
+                            "foto6 foto5 foto3"
+                            "foto8 foto9 foto7"
+                            ;
+        gap: 10px;
+        padding: 2px;
+    }
+    #img1{grid-area: foto1;
+        background-color: burlywood;
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+          align-self: center;
+          background-position:center;
+    }
+    #img2{
+        grid-area: foto2;
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+          align-self: center;
+          background-position:center;
+    }
+    #img6{grid-area: foto3;
+            
+          width: 100%;
+          height: 100%;
+          justify-items: center;
+          align-self: center;
+          background-position:center;
+    }
+    #img9{grid-area: foto5;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img3{grid-area: foto6;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img11{grid-area: foto7;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img4{grid-area: foto8;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    #img7{grid-area: foto9;
+            
+        width: 100%;
+        height: 100%;
+        justify-items: center;
+        align-self: center;
+        background-position:center;
+    }
+    
+}
+
+/* MAIN CONTACTO*/
+
+    /*FORMULARIO DE CONTACTO*/
+    
+
+    
+        #contactanosMain{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            align-self: center;
+        }
+
+        #contactanosMain section form{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            align-self: center;
+        }
+    
+        #nombreUno {
+            font-family:Arial, Helvetica, sans-serif;
+            }
+        #nombreDos{
+            font-family:Arial, Helvetica, sans-serif;
+            background-color: #BF9F93;
+        }
+        #emailUno {
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        #emailDos {
+            font-family:Arial, Helvetica, sans-serif;
+            background-color: #BF9F93;
+        }
+
+        #telefonoUno{
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        #telefonoDos{
+            font-family:Arial, Helvetica, sans-serif;
+            background-color: #BF9F93;
+            left: 10px;
+        }
+        textarea{
+            font-family:Arial, Helvetica, sans-serif;
+            line-height: 40px;
+            background-color: #BF9F93;
+            left: 10px;
+            border: 2px,orange;
+            margin-right: 10px; 
+        }
+        #botonSend, #botonReset{
+            padding: 5px;
+            border: solid, 2px;
+        }
+ @media only screen and (max-width:468px){
+        #nombreUno{font-size: 20px;
+            line-height: 40px;
+            padding: 8px;
+        }
+        #nombreDos{
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+    }
+        #emailUno 
+            {font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+            }
+        #emailDos {
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+            }
+        #telefonoUno{
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+            }
+        #telefonoDos{
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+        }
+        #textarea{
+            font-size: 20px;
+            padding: 10px;
+            height: 350px;
+            width: 00px;}
+    }
+    @media only screen and (min-width:468px){
+        #nombreUno{font-size: 20px;
+            line-height: 40px;
+            padding: 8px;
+        }
+        #nombreDos{
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+    }
+        #emailUno 
+            {font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+            }
+        #emailDos {
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+            }
+        #telefonoUno{
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+            }
+        #telefonoDos{
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+        }
+        #textarea{
+            font-size: 20px;
+            padding: 10px;
+            height: 350px;
+            width: 00px;}
+        
+    }
+    @media only screen and (min-width:600px){
+        #nombreUno{font-size: 20px;
+            line-height: 40px;
+            padding: 8px;
+        }
+        #nombreDos{
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+    }
+        #emailUno 
+            {font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+            }
+        #emailDos {
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+            }
+        #telefonoUno{
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+            }
+        #telefonoDos{
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+        }
+        #textarea{
+            font-size: 20px;
+            padding: 10px;
+            height: 350px;
+            width: 00px;}
+        
+    }
+    @media only screen and (min-width:768px){
+        #nombreUno{font-size: 20px;
+            line-height: 40px;
+            padding: 8px;
+        }
+        #nombreDos{
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+    }
+        #emailUno 
+            {font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+            }
+        #emailDos {
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+            }
+        #telefonoUno{
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+            }
+        #telefonoDos{
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+        }
+        #textarea{
+            font-size: 20px;
+            padding: 10px;
+            height: 350px;
+            width: 00px;}
+    }
+    @media only screen and (min-width:992px){
+        #nombreUno{font-size: 20px;
+            line-height: 40px;
+            padding: 8px;
+        }
+        #nombreDos{
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+    }
+        #emailUno 
+            {font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+            }
+        #emailDos {
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+            }
+        #telefonoUno{
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+            }
+        #telefonoDos{
+            font-size: 20px;
+            line-height: 40px;
+            padding: 10px;
+        }
+        #textarea{
+            font-size: 20px;
+            padding: 10px;
+            height: 350px;
+            width: 700px;
+        }
+       
+    }
