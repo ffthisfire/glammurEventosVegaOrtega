@@ -27,38 +27,41 @@ header{
         text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
         text-align: center;
     }
+    
+    
   
     a { color: inherit; } 
 
     /*NAV*/
 
-    header div nav {
+    header div #navHeader {
         background-position: bottom;
     }
-    nav{
+    #navHeader{
         font-family: 'Corinthia', cursive;
         background-color:#BF9F93;
         text-align: center;
     }
-    nav ul{
+    #navHeader ul{
         display:flex;
         justify-content: space-around;
         height: 100%;
         list-style: none;
         }
-    nav ul li{
+        #navHeader ul li{
         width: 25%;
         height: 100px;
     }
-    nav ul li a{
+    #navHeader ul li a{
         color: white;
         text-decoration: none;
         display: block;
+        transition: all 2s;
     }
-    nav ul li a:hover{
-        background-color:#F2DDD0;      
+    #navHeader ul li a:hover{
+        background-color:#F2DDD0;
+        font-size: 6vh;
     }
-
     /*Media Qery Header Index*/
     @media only screen and (max-width:468px){
         header {
@@ -67,6 +70,7 @@ header{
         #tituloHeader{
         font-size: 5vh;
         font-weight: 60px;
+        transition: linear 0.5s;
         }
         nav{height: 20vh;
             font-size:3.2vh;
@@ -84,6 +88,7 @@ header{
         #tituloHeader{
         font-size: 5vh;
         font-weight: 60px;
+        transition: linear 0.5s;
         }
         nav{height: 20vh;
             font-size:3.5vh;
@@ -100,6 +105,7 @@ header{
         #tituloHeader{
         font-size: 8vh;
         font-weight: 60px;
+        transition: linear 0.5s;
         }
         nav{height: 28vh;
             font-size:4.2vh;
@@ -117,6 +123,7 @@ header{
         #tituloHeader{
         font-size: 5vh;
         font-weight: 60px;
+        transition: linear 0.5s;
         }
         nav{height: 20vh;
             font-size:3.2vh;
@@ -133,6 +140,7 @@ header{
         #tituloHeader{
         font-size: 10vh;
         font-weight: 70px;
+        transition: linear 0.5s;
         }
         nav{height: 8vh;
             font-size:3.2vh;
@@ -183,15 +191,15 @@ header{
     }
 
     /*Chat flotante whatsapp*/
-    .chat{
-        width: 45px;
-        height: 45px;
+    #chatW{
+        width: 5vh;
+        height:5vh;
         position: fixed;
         right: 18px;
         bottom: 18px;
     }
-    .chat img {
-        width: 45px;
+    #chatW img {
+        width: 5vh;
         position: sticky;
     }
 /*Media Qery Main Index*/
@@ -206,6 +214,7 @@ header{
                                     "article"
                                     "aside";
         }
+  
     }
     @media only screen and (min-width:468px){
         #indexMain{
@@ -261,16 +270,15 @@ header{
 /*FOOT*/
  /*footer con redes, info de contactos, e info afip*/
 footer{
+    display: grid;
     background-color:#F2F2F2;
     height: 200px;
     color:#B0B0BF;
 }
 
 }
-.footer-social{
-    display: inline-block
-}
-.footer-social ul li{
+
+#footerCuatro ul{
     display:flex;
     flex-direction: row;
     text-align: left;
@@ -279,9 +287,20 @@ footer{
 
 
 
+
+
+
 /*Media Qery Footer*/
 @media only screen and (max-width:468px){
-#faceFoot, #instaFoot, #twitFoot{
+    footer{
+        grid-template-columns: 48% 48% ;
+        grid-template-rows: 300px 300px 10px;
+        grid-template-areas: "footUno footDos"
+                            " footTres footCuatro"
+                            "footCinco footCinco" ;
+    } 
+    
+    #faceFoot, #instaFoot, #twitFoot{
     width: 45px;
     height: 45px;
     margin: 0px;
@@ -1260,6 +1279,21 @@ footer{
             padding: 5px;
             border: solid, 2px;
         }
+        #nombreDos:focus{
+            height: 30px;
+            width: 280px;
+        }
+        #emailDos:focus{
+            height: 30px;
+            width: 280px;
+        }
+        #telefonoDos:focus{
+            height: 30px;
+            width: 280px;
+        }
+        textarea:focus{
+            background-color:burlywood ;
+        }
  @media only screen and (max-width:468px){
         #nombreUno{font-size: 20px;
             line-height: 40px;
@@ -1269,6 +1303,8 @@ footer{
             font-size: 20px;
             line-height: 40px;
             padding: 10px;
+            height: 25px;
+            width: 250px;
     }
         #emailUno 
             {font-size: 20px;
@@ -1290,11 +1326,11 @@ footer{
             line-height: 40px;
             padding: 10px;
         }
-        #textarea{
+        textarea{
             font-size: 20px;
             padding: 10px;
             height: 350px;
-            width: 00px;}
+            width: 400px;}
     }
     @media only screen and (min-width:468px){
         #nombreUno{font-size: 20px;
@@ -1305,6 +1341,9 @@ footer{
             font-size: 20px;
             line-height: 40px;
             padding: 10px;
+            height: 25px;
+            width: 250px;
+            transition: all 1s;
     }
         #emailUno 
             {font-size: 20px;
@@ -1315,6 +1354,9 @@ footer{
             font-size: 20px;
             line-height: 40px;
             padding: 10px;
+            height: 25px;
+            width: 250px;
+            transition: all 1s;
             }
         #telefonoUno{
             font-size: 20px;
@@ -1325,12 +1367,17 @@ footer{
             font-size: 20px;
             line-height: 40px;
             padding: 10px;
+            height: 25px;
+            width: 250px;
+            transition: all 1s; 
         }
-        #textarea{
+        textarea{
             font-size: 20px;
             padding: 10px;
             height: 350px;
-            width: 00px;}
+            width: 400px;
+            transition: all 1s;
+            }
         
     }
     @media only screen and (min-width:600px){
@@ -1342,6 +1389,9 @@ footer{
             font-size: 20px;
             line-height: 40px;
             padding: 10px;
+            height: 25px;
+            width: 250px;
+            transition: all 1s;
     }
         #emailUno 
             {font-size: 20px;
@@ -1352,6 +1402,9 @@ footer{
             font-size: 20px;
             line-height: 40px;
             padding: 10px;
+            height: 25px;
+            width: 250px;
+            transition: all 1s;
             }
         #telefonoUno{
             font-size: 20px;
@@ -1362,12 +1415,15 @@ footer{
             font-size: 20px;
             line-height: 40px;
             padding: 10px;
+            height: 25px;
+            width: 250px;
+            transition: all 1s;
         }
-        #textarea{
+        textarea{
             font-size: 20px;
             padding: 10px;
             height: 350px;
-            width: 00px;}
+            width: 400px;}
         
     }
     @media only screen and (min-width:768px){
@@ -1379,6 +1435,9 @@ footer{
             font-size: 20px;
             line-height: 40px;
             padding: 10px;
+            height: 25px;
+            width: 250px;
+            transition: all 1s;
     }
         #emailUno 
             {font-size: 20px;
@@ -1389,6 +1448,9 @@ footer{
             font-size: 20px;
             line-height: 40px;
             padding: 10px;
+            height: 25px;
+            width: 250px;
+            transition: all 1s;
             }
         #telefonoUno{
             font-size: 20px;
@@ -1399,12 +1461,15 @@ footer{
             font-size: 20px;
             line-height: 40px;
             padding: 10px;
+            height: 25px;
+            width: 250px;
+            transition: all 1s;
         }
-        #textarea{
+        textarea{
             font-size: 20px;
             padding: 10px;
             height: 350px;
-            width: 00px;}
+            width: 400px;}
     }
     @media only screen and (min-width:992px){
         #nombreUno{font-size: 20px;
@@ -1415,6 +1480,9 @@ footer{
             font-size: 20px;
             line-height: 40px;
             padding: 10px;
+            height: 25px;
+            width: 250px;
+            transition: all 1s;
     }
         #emailUno 
             {font-size: 20px;
@@ -1425,6 +1493,9 @@ footer{
             font-size: 20px;
             line-height: 40px;
             padding: 10px;
+            height: 25px;
+            width: 250px;
+            transition: all 1s;
             }
         #telefonoUno{
             font-size: 20px;
@@ -1435,12 +1506,15 @@ footer{
             font-size: 20px;
             line-height: 40px;
             padding: 10px;
+            height: 25px;
+            width: 250px;
+            transition: all 1s;
         }
-        #textarea{
+        textarea{
             font-size: 20px;
             padding: 10px;
             height: 350px;
-            width: 700px;
+            width: 400px;
         }
        
     }
