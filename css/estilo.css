@@ -22,29 +22,27 @@ header{
 
         /*Titulo h1 header*/
         font-family: 'Corinthia', cursive;
-        color: blanchedalmond ;
+        color: #ffebcc ;
         filter: none;
         text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
         text-align: center;
     }
     
-    
-  
     a { color: inherit; } 
 
     /*NAV*/
 
-    header div #navHeader {
+    header div .navbar {
         background-position: bottom;
     }
-    #navHeader{
+    .navbar{
         font-family: 'Corinthia', cursive;
         background-color:#BF9F93;
-        text-align: center;
+        text-align:center;
     }
-    #navHeader ul{
+    .navbar ul{
         display:flex;
-        justify-content: space-around;
+        justify-content:space-around;
         height: 100%;
         list-style: none;
         }
@@ -52,30 +50,30 @@ header{
         width: 25%;
         height: 100px;
     }
-    #navHeader ul li a{
+    .navbar ul li a{
         color: white;
         text-decoration: none;
         display: block;
         transition: all 2s;
     }
-    #navHeader ul li a:hover{
+    .navbar ul li a:hover{
         background-color:#F2DDD0;
-        font-size: 6vh;
+        font-size: 5vh;
     }
     /*Media Qery Header Index*/
     @media only screen and (max-width:468px){
         header {
-            height: 32vh
+            height: 20vh
         }
         #tituloHeader{
         font-size: 5vh;
         font-weight: 60px;
         transition: linear 0.5s;
         }
-        nav{height: 20vh;
+        .navbar{height: 6vh;
             font-size:3.2vh;
         }
-        nav ul{
+        .navbar ul{
             flex-direction: column;
             text-align: center;
             align-items: center;
@@ -83,34 +81,34 @@ header{
 }
     @media only screen and (min-width:468px){
         header {
-            height: 32vh
+            height: 22vh
         }
         #tituloHeader{
         font-size: 5vh;
         font-weight: 60px;
-        transition: linear 0.5s;
+        transition: 0.5s;
         }
-        nav{height: 20vh;
+        .navbar{height: 6vh;
             font-size:3.5vh;
         }
-        nav ul{
+        .navbar ul{
             flex-direction: column;
             text-align: center;
             align-items: center;
     }
     @media only screen and (min-width:600px){
         header {
-            height: 47vh
+            height: 22vh
         }
         #tituloHeader{
         font-size: 8vh;
         font-weight: 60px;
         transition: linear 0.5s;
         }
-        nav{height: 28vh;
-            font-size:4.2vh;
+        .navbar{height: 6vh;
+            font-size:3.2vh;
         }
-        nav ul{
+        .navbar ul{
             flex-direction: column;
             text-align: center;
             align-items: center;}
@@ -118,34 +116,34 @@ header{
     @media only screen and (min-width:768px){
     
         header {
-            height: 32vh
+            height: 22vh
         }
         #tituloHeader{
         font-size: 5vh;
         font-weight: 60px;
         transition: linear 0.5s;
         }
-        nav{height: 20vh;
+        .navbar{height: 6vh;
             font-size:3.2vh;
         }
-        nav ul{
+        .navbar ul{
             flex-direction: column;
             text-align: center;
             align-items: center;}
     }
     @media only screen and (min-width:992px){
         header {
-            height: 32vh
+            height: 25vh
         }
         #tituloHeader{
-        font-size: 10vh;
-        font-weight: 70px;
-        transition: linear 0.5s;
+        font-size: 50vh;
+        font-weight: 120px;
+        transition:linear 0.5s;
         }
-        nav{height: 8vh;
+        .navbar{height: 8vh;
             font-size:3.2vh;
         }
-        nav ul{
+        .navbar ul{
             flex-direction: row;
             text-align: center;
             align-items: flex-start;
@@ -161,34 +159,54 @@ header{
 #indexMain{
     display: grid;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: #F2DDD0;
 }
 
 /*Carrusel con imagenes de trabajos 100% ancho*/
 #indexMainDivUno{
     background-color:#F2DDD0 ;
     grid-area: div;
+    
 }
-
+.carousel, .carousel-inner , .item , .img ,.carouselExampleControlsNoTouching{
+    height: 100%;
+    
+    align-items: center;
+    justify-content:center;
+    align-content: center;
+    text-align: center;
+    padding: 2%;
+  }
 /*Box izquierda de la pantalla con info de la funcion de la empresa*/
     #sectionUno{
-    background-color: #F2F2F2;
+    background-color: #F2DDD0;
     grid-area: section;
+    padding: 5%;
+    text-align: center;
+    }
+    #titSection{
+        font-size: 4vh;
+        font-weight: 700;
+    }
+    #p1Section{
+        font-size: 3vh;
+        font-weight: 200;
+    }
+    #p2Section{font-size: 3vh;
+        font-weight: 400;
+
     }
 /*mapa del local*/
     #articleUno{
-    background-color:#F2F2F2; 
+    background-color:#F2DDD0; 
     grid-area: article;
     align-items: center;
     text-align: center;
+    border: black;
+    padding: 5%;
     
 }
    
-/*capturas a modo de carrusel de las diferentes experiencias y opiniones de clientes*/
-#asideUno{    
-    background-color: #9392A6;
-    grid-area: aside;
-    }
 
     /*Chat flotante whatsapp*/
     #chatW{
@@ -206,63 +224,65 @@ header{
     @media only screen and (max-width:468px){
         #indexMain{
             height: 1375px;
-            grid-template-rows: 300px 450px 300px 300px; 
+            grid-template-rows: 300px 450px 300px ; 
             grid-template-columns: 100%;
             gap:0.5rem;
             grid-template-areas:        "div"
                                     "section"
                                     "article"
-                                    "aside";
+                                   ;
         }
   
     }
     @media only screen and (min-width:468px){
         #indexMain{
-            height: 1272px;
-            grid-template-rows: 300px 350px 300px 300px; 
+            height: 1000px;
+            grid-template-rows: 300px 400px 300px ; 
             grid-template-columns: 100%;
-            gap:0.5rem;
+            gap:0.2rem;
             grid-template-areas:        "div"
                                     "section"
                                     "article"
-                                    "aside";
+                              
         }
+        #sectionUno{
+            padding: 2%
+        };
     }
     @media only screen and (min-width:600px){
         #indexMain{
-            height: 1175px;
-            grid-template-rows: 300px 250px 300px 300px; 
+            height: 1030px;
+            grid-template-rows: 350px 430px 300px; 
             grid-template-columns: 100%;
-            gap:0.5rem;
+            gap:0.2rem;
             grid-template-areas:        "div"
                                     "section"
-                                    "article"
-                                    "aside";
+                                    "article"                                    ;
         }
         
     }
     @media only screen and (min-width:768px){
     
         #indexMain{
-            height: 1272px;
-            grid-template-rows: 300px 350px 300px 300px; 
+            height: 1172px;
+            grid-template-rows: 500px 350px 300px; 
             grid-template-columns: 100%;
             gap:0.5rem;
             grid-template-areas:        "div"
                                     "section"
                                     "article"
-                                    "aside";
+                                    ;
             }
     }
     @media only screen and (min-width:992px){
         #indexMain{
-            height: 970px;
-            grid-template-rows: 300px 350px 300px; 
+            height: 1110px;
+            grid-template-rows: 750px 350px ; 
             grid-template-columns: 50% 50%;
             gap:0.5rem;
             grid-template-areas:"div div"
                                 "section article"
-                                "aside aside";
+                                ;
         }
         
     }
@@ -271,11 +291,9 @@ header{
  /*footer con redes, info de contactos, e info afip*/
 footer{
     display: grid;
-    background-color:#F2F2F2;
-    height: 200px;
+    background-color:#BF9F93;
+    
     color:#B0B0BF;
-}
-
 }
 
 #footerCuatro ul{
@@ -284,68 +302,287 @@ footer{
     text-align: left;
     align-items: flex-start;
 }
-
-
-
-
-
-
 /*Media Qery Footer*/
 @media only screen and (max-width:468px){
     footer{
-        grid-template-columns: 48% 48% ;
-        grid-template-rows: 300px 300px 10px;
-        grid-template-areas: "footUno footDos"
-                            " footTres footCuatro"
-                            "footCinco footCinco" ;
-    } 
-    
+        height: 540px;
+        grid-template-columns: 100%;
+        grid-template-rows: 120px 120px 150px 100px 50px;
+        grid-template-areas: "footUno "
+                            "footDos"
+                            " footTres "
+                            "footCuatro"
+                            "footCinco " ;
+        gap: 2px;                   
+                        }
     #faceFoot, #instaFoot, #twitFoot{
-    width: 45px;
-    height: 45px;
-    margin: 0px;
-    padding: 4px;
+        width: 65px;
+        height: 65px;
+        margin: 15px;
+        padding: 10px;   
+       
+    }
+    #footerUno{
+        grid-area: footUno;
+        font-family: monospace;color: black;
+        padding: 5px;
+        text-align: center;
+        align-items: center;
+    }
+    #footerDos{
+        grid-area: footDos;
+        font-family: monospace;color: black;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+
+    }
+    #footerTres{
+        grid-area: footTres;
+        font-family: monospace;color: black;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+    }
+    #footerCuatro{
+        grid-area: footCuatro;
+        padding: 5px;
+       
+        text-align: center;
+        align-items: center;
+        align-self: center;
+    }
+    #footerCinco{
+        font-family: monospace;color: rgb(7, 7, 7);
+        grid-area: footCinco;
+        text-align: center;
+        align-items: center;
+        padding: 5px;
     }
 }
 @media only screen and (min-width:468px){
+    footer{
+        height: 540px;
+        grid-template-columns: 100%;
+        grid-template-rows: 120px 120px 150px 100px 50px;
+        grid-template-areas: "footUno "
+                            "footDos"
+                            " footTres "
+                            "footCuatro"
+                            "footCinco " ;
+        gap: 2px;                   
+                        }
     #faceFoot, #instaFoot, #twitFoot{
-        width: 45px;
-        height: 45px;
-        margin: 0px;
-        padding: 4px;
+        width: 65px;
+        height: 65px;
+        margin: 15px;
+        padding: 10px;   
+       
+    }
+    #footerUno{
+        grid-area: footUno;
+        font-family: monospace;color: black;
+        padding: 5px;
+        text-align: center;
+        align-items: center;
+    }
+    #footerDos{
+        grid-area: footDos;
+        font-family: monospace;color: black;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+
+    }
+    #footerTres{
+        grid-area: footTres;
+        font-family: monospace;color: black;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+    }
+    #footerCuatro{
+        grid-area: footCuatro;
+        padding: 5px;
+       
+        text-align: center;
+        align-items: center;
+        align-self: center;
+    }
+    #footerCinco{
+        font-family: monospace;color: rgb(7, 7, 7);
+        grid-area: footCinco;
+        text-align: center;
+        align-items: center;
+        padding: 5px;
     }
 }
 @media only screen and (min-width:600px){
+    footer{
+        height: 540px;
+        grid-template-columns: 100%;
+        grid-template-rows: 120px 120px 150px 100px 50px;
+        grid-template-areas: "footUno "
+                            "footDos"
+                            " footTres "
+                            "footCuatro"
+                            "footCinco " ;
+        gap: 2px;                   
+                        }
     #faceFoot, #instaFoot, #twitFoot{
-        width: 45px;
-        height: 45px;
-        margin: 0px;
-        padding: 4px;
+        width: 85px;
+        height: 85px;
+        margin: 15px;
+        padding: 10px;   
+       
+    }
+    #footerUno{
+        grid-area: footUno;
+        font-family: monospace;color: black;
+        padding: 5px;
+        text-align: center;
+        align-items: center;
+    }
+    #footerDos{
+        grid-area: footDos;
+        font-family: monospace;color: black;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+
+    }
+    #footerTres{
+        grid-area: footTres;
+        font-family: monospace;color: black;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+    }
+    #footerCuatro{
+        grid-area: footCuatro;
+        padding: 5px;
+       ;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+    }
+    #footerCinco{
+        font-family: monospace;color: rgb(7, 7, 7);
+        grid-area: footCinco;
+        text-align: center;
+        align-items: center;
+        padding: 5px;
     }
     
 }
 @media only screen and (min-width:768px){
+    footer{
+        height: 540px;
+        grid-template-columns: 100%;
+        grid-template-rows: 120px 120px 150px 100px 50px;
+        grid-template-areas: "footUno "
+                            "footDos"
+                            " footTres "
+                            "footCuatro"
+                            "footCinco " ;
+        gap: 2px;                   
+                        }
     #faceFoot, #instaFoot, #twitFoot{
-        width: 45px;
-        height: 45px;
-        margin: 0px;
-        padding: 4px;
+        width: 85px;
+        height: 85px;
+        margin: 15px;
+        padding: 10px;   
+       
     }
+    #footerUno{
+        grid-area: footUno;
+        font-family: monospace;color: black;
+        padding: 5px;
+        text-align: center;
+        align-items: center;
+    }
+    #footerDos{
+        grid-area: footDos;
+        font-family: monospace;color: black;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
 
+    }
+    #footerTres{
+        grid-area: footTres;
+        font-family: monospace;color: black;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+    }
+    #footerCuatro{
+        grid-area: footCuatro;
+        padding: 5px;
+       ;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+    }
+    #footerCinco{
+        font-family: monospace;color: rgb(7, 7, 7);
+        grid-area: footCinco;
+        text-align: center;
+        align-items: center;
+        padding: 5px;
+    }
    
 }
 @media only screen and (min-width:992px){
+    footer{
+        height: 310px;
+        grid-template-columns: 50% 50% ;
+        grid-template-rows: 120px 120px 35px;
+        grid-template-areas: "footUno footDos"
+                            " footTres footCuatro"
+                            "footCinco footCinco" ;
+        gap: 2px;                   
+                        }
     #faceFoot, #instaFoot, #twitFoot{
-        width: 45px;
-        height: 45px;
-        margin: 0px;
-        padding: 4px;
+        width: 85px;
+        height: 85px;
+        margin: 15px;
+        padding: 10px;   
+    }
+    #footerUno{
+        grid-area: footUno;
+        font-family: monospace;color: black;
+        padding: 5px;
+    }
+    #footerDos{
+        grid-area: footDos;
+        font-family: monospace;color: black;
+        padding: 10px;
+
+    }
+    #footerTres{
+        grid-area: footTres;
+        font-family: monospace;color: black;
+        padding: 10px;
+    }
+    #footerCuatro{
+        grid-area: footCuatro;
+        padding: 5px;
+        justify-content: space-between ;
+    }
+    #footerCinco{
+        font-family: monospace;color: rgb(7, 7, 7);
+        grid-area: footCinco;
+        text-align: center;
+        align-items: center;
+        padding: 5px;
     }
 }
 
+
 /*Main Nosotros*/
         #nosotrosMain{
-            
+            background-color: #F2F2F2;
             width: 100%;
             display: grid;
             
@@ -355,15 +592,19 @@ footer{
         /*Breve reseña historica de la empresa*/
         #nosotrosMain section{
             background-color: #F2F2F2;
-            font-family: 'Lato', sans-serif,'Courier New', Courier, monospace;
-            font-size: 20px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            margin-right: 0px;
-            margin-left: 0px;
-            border: 3px solid #735149;
-            padding: 1px;
+            font-family:'Lucida Sans', 'Lucida Sans Regular';      
+              font-size: 2vh;
+            
             grid-area: section;
+            padding: 5%;
+        }
+        /*Foto de Dueña*/
+        #imgMur{
+            height: 100%;
+            width: 95%;
+            grid-area: imgMur;
+
+
         }
         /*Video*/
         #nosotrosMainDiv{
@@ -374,88 +615,138 @@ footer{
     /*Media Qery Main Nosotros*/
         @media only screen and (max-width:468px){
             #nosotrosMain{
-                height: 570px;
-                grid-template-rows: 300px 450px; 
+                height: 1020px;
+                grid-template-rows: 500px 300px 350px; 
                 grid-template-columns: 100%;
                 gap:0.5rem;
                 grid-template-areas:"section"
+                                    "imgMur"
                                     "div";
             }
             #nosotrosMainDiv section{
                 height: 295px;
                 width: 100%;
-            }
-            #nosotrosMainDiv iframe{
-                height: 265px;
-                width: 100%;
-                text-align: center;
-                align-items: stretch;
-                
-                
-            }
-        }
-        @media only screen and (min-width:468px){
-            #nosotrosMain{
-                height: 570px;
-                grid-template-rows: 300px 450px; 
-                grid-template-columns: 100%;
-                gap:0.5rem;
-                grid-template-areas:"section"
-                                    "div";
-            }
-            #nosotrosMainDiv section{
-                height: 295px;
-                width: 100%;
-            }
-            #nosotrosMainDiv iframe{
-                height: 265px;
-                width: 100%;
-                text-align: center;
-                align-items: stretch;
-                
-            }
-    
-        }
-        @media only screen and (min-width:600px){
-            #nosotrosMain{
-                height: 650px;
-                grid-template-rows: 300px 450px; 
-                grid-template-columns: 100%;
-                gap:0.5rem;
-                grid-template-areas:"section"
-                                    "div";
-            }
-            #nosotrosMainDiv section{
-                height: 295px;
-                width: 100%;
+                justify-content:  center;
             }
             #nosotrosMainDiv iframe{
                 height: 340px;
                 width: 100%;
                 text-align: center;
                 align-items: stretch;
+                padding: 1%;
                 
             }
-            
+            #imgMur{
+                width: auto;
+                height: 100%;
+                justify-items: center;
+                  align-self: center;
+                  background-position:center;
+                  padding: 1%;
+                  text-align: center;
+            }
+         
         }
-        @media only screen and (min-width:768px){
+        @media only screen and (min-width:468px){
             #nosotrosMain{
-                height: 570px;
-                grid-template-rows: 300px 450px; 
+                height: 1120px;
+                grid-template-rows: 450px 300px 350px; 
                 grid-template-columns: 100%;
                 gap:0.5rem;
                 grid-template-areas:"section"
+                                    "imgMur"
                                     "div";
             }
             #nosotrosMainDiv section{
                 height: 295px;
                 width: 100%;
+                justify-content:  center;
             }
             #nosotrosMainDiv iframe{
-                height: 265px;
+                height: 340px;
                 width: 100%;
                 text-align: center;
                 align-items: stretch;
+                padding: 1%;
+                
+            }
+            #imgMur{
+                width: auto;
+                height: 100%;
+                justify-items: center;
+                  align-self: center;
+                  background-position:center;
+                  padding: 1%;
+                  text-align: center;
+            }
+    
+        }
+        @media only screen and (min-width:600px){
+            #nosotrosMain{
+                height: 1020px;
+                grid-template-rows: 350px 300px 350px; 
+                grid-template-columns: 100%;
+                gap:0.5rem;
+                grid-template-areas:"section"
+                                    "imgMur"
+                                    "div";
+            }
+            #nosotrosMainDiv section{
+                height: 295px;
+                width: 100%;
+                justify-content:  center;
+            }
+            #nosotrosMainDiv iframe{
+                height: 340px;
+                width: 100%;
+                text-align: center;
+                align-items: stretch;
+                padding: 1%;
+                
+            }
+            #imgMur{
+                width: auto;
+                height: 100%;
+                justify-items: center;
+                  align-self: center;
+                  background-position:center;
+                  padding: 1%;
+                  text-align: center;
+            }
+            
+        }
+        @media only screen and (min-width:768px){
+            #nosotrosMain{
+                height: 950px;
+                grid-template-rows: 450px 450px; 
+                grid-template-columns: 50% 50%;
+                gap:0.5rem;
+                grid-template-areas:"section imgMur"
+                                    "div div";
+            }
+            #nosotrosMainDiv section{
+                height: 295px;
+                width: 100%;
+            }
+            #imgMur{
+                width: 100%;
+                height: 100%;
+                justify-items: center;
+                  align-self: center;
+                  background-position:center;
+                  padding: 1%;
+
+            }
+            #nosotrosMainDiv iframe{
+                height: 520px;
+                width: 99%;
+                text-align: center;
+                align-items: center;
+                align-content: center;
+                align-self: center;
+                justify-content: center;
+
+                padding: 5%;
                 
             }
         
@@ -463,22 +754,34 @@ footer{
         }
         @media only screen and (min-width:992px){
             #nosotrosMain{
-                height: 825px;
-                grid-template-rows: 300px 450px; 
-                grid-template-columns: 100%;
+                height: 930px;
+                grid-template-rows: 450px 450px; 
+                grid-template-columns: 50% 50%;
                 gap:0.5rem;
-                grid-template-areas:"section"
-                                    "div";
+                grid-template-areas:"section imgMur"
+                                    "div div";
             }
             #nosotrosMainDiv section{
                 height: 295px;
                 width: 100%;
             }
+            #imgMur{
+                width: 100%;
+                height: 100%;
+                justify-items: center;
+                  align-self: center;
+                  background-position:center;
+                  padding: 1%;
+            }
             #nosotrosMainDiv iframe{
                 height: 520px;
-                width: 100%;
+                width: 99%;
                 text-align: center;
-                align-items: stretch;
+                align-items: center;
+                align-content: center;
+                align-self: center;
+                justify-content: center;
+                padding: 5%;
                 
             }
             
@@ -1234,6 +1537,7 @@ footer{
             text-align: center;
             align-items: center;
             align-self: center;
+            padding: 11px;
         }
 
         #contactanosMain section form{
@@ -1246,6 +1550,7 @@ footer{
     
         #nombreUno {
             font-family:Arial, Helvetica, sans-serif;
+            padding: 5px;
             }
         #nombreDos{
             font-family:Arial, Helvetica, sans-serif;
@@ -1518,3 +1823,4 @@ footer{
         }
        
     }
+}
