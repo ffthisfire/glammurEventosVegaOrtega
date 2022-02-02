@@ -1,0 +1,203 @@
+header{
+    display: flex;
+    flex-direction: column;
+    align-items:stretch;
+    text-decoration: none;
+
+        #tituloHeader{
+        /* Imagen de fondo header*/
+        background-image: url("../img/salon\ headder\ 2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(0.5px);
+        background-position: center;
+
+        /*Titulo h1 header*/
+        font-family:$fontTitulos;
+        color: #ffebcc ;
+        filter: none;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.534);
+        text-align: center;
+        }
+        /*NAV*/
+        .navbar{
+        font-family: $fontNav;
+        background-color:#BF9F93;
+        text-align:center;
+        z-index: 3;
+        background-position: bottom;
+        
+            ul{
+            display:flex;
+            justify-content:space-between;
+            height: 3rem;
+            list-style: none;
+            
+                li{
+                width: 25%;
+                height: 2vh;
+                    
+                    a{
+                    color: white;
+                    text-decoration: none;
+                    display: block;
+                    transition:linear 1s;
+                    transform: translateY(-20px);
+                    }
+                    &:hover{
+                    text-decoration: underline;
+                    }
+                
+                }
+            }    
+
+        }
+
+
+    a { color: inherit; } 
+      
+    /*Media Qery Header Index*/
+    @media only screen and (max-width:468px){
+        header {
+                height: 24vh
+            }
+        #tituloHeader{
+        font-size: 5vh;
+        font-weight: 60px;
+        transition: linear 0.5s;
+        }
+        .navbar{
+        height: 8vh;
+            ul{
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+                li{
+                background-color: #BF9F93;
+                width: 250px;
+                    a{
+                    font-family: $fontNav;
+                    font-size: 4vh;
+                    font-weight: 300;    
+                    }
+                }
+            }
+        }  
+    }
+    @media only screen and (min-width:468px){
+        header {
+            height: 24vh
+        }
+        #tituloHeader{
+        font-size: 5vh;
+        font-weight: 60px;
+        transition: 0.5s;
+        }
+        .navbar{height: 8vh;
+            ul{
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+                li{
+                    background-color: #BF9F93;
+                    width: 250px;
+                    a{
+                    font-family: $fontNav;
+                    font-size: 5vh ;
+                    font-weight: 300;    
+                    }
+                }
+            }
+        }
+    }
+    
+    @media only screen and (min-width:600px){
+        header {
+            height: 24vh
+        }
+        #tituloHeader{
+        font-size: 8vh;
+        font-weight: 60px;
+        transition: linear 0.5s;
+        }
+        .navbar{height: 8vh;
+            font-size:3.2vh;
+            ul{
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+                li{
+                background-color: #BF9F93;
+                width: 250px;
+                    a{
+                    font-family: $fontNav;
+                    font-size: 5vh ;
+                    font-weight: 300;    
+                    }
+                }
+            }
+        }
+    }  
+        
+    @media only screen and (min-width:768px){
+    
+        header {
+            height: 24vh
+            }
+        #tituloHeader{
+        font-size: 5vh;
+        font-weight: 60px;
+        transition: linear 0.5s;
+        }
+        .navbar{height: 8vh;
+           ul{
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+                li{
+                background-color: #BF9F93;
+                width: 250px;
+                    a{
+                    font-family: $fontTitulos;
+                    font-size: 5vh ;
+                    font-weight: 300;    
+                    }
+                }
+            }    
+        }
+    }
+    @media only screen and (min-width:992px){
+        header {
+            height: 24vh
+            }
+        #tituloHeader{
+        font-size: 50vh;
+        font-weight: 120px;
+        transition:linear 0.5s;
+        }
+        .navbar{height: 8vh;
+            width: 100%;
+            display: flex;
+            ul{
+            flex-direction: row;
+            text-align:justify;
+            align-items: flex-end;
+            justify-content: space-evenly;
+            width: 965px;
+                li a{
+                height: 4vh;
+                transform: translateY(-20px);
+                font-size: 5vh;
+                }
+                li a:hover{
+                    font-size: 6vh;
+                    height: 2vh;    
+                    transform: translateY(-35px);
+                }
+            }
+        }
+    }
+        
+        
+}
+
