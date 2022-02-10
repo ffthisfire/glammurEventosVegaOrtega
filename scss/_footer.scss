@@ -36,7 +36,13 @@
         }
     }
 }
-
+@mixin mixinIconosCuatro ($width,$height) {
+    width: $width;
+    height: $height;
+    margin: 15px;
+    padding: 10px; 
+    
+}
 /*Media Qery Footer*/
 @media only screen and (max-width:468px){
     footer{
@@ -50,10 +56,8 @@
                             "footCinco" ;
         gap: 2px;                   
         #faceFoot, #instaFoot, #twitFoot{
-                width: 65px;
-                height: 65px;
-                margin: 15px;
-                padding: 10px;                   
+            @include mixinIconosCuatro(65px,65px)
+                                 
         }
         #footerUno{
             grid-area: footUno;
@@ -107,10 +111,7 @@
         gap: 2px;                   
                         
         #faceFoot, #instaFoot, #twitFoot{
-            width: 65px;
-            height: 65px;
-            margin: 15px;
-            padding: 10px; 
+            @include mixinIconosCuatro(65px,65px);
         }
         #footerUno{
             grid-area: footUno;
@@ -162,10 +163,7 @@
         gap: 2px;                   
                         
         #faceFoot, #instaFoot, #twitFoot{
-            width: 85px;
-            height: 85px;
-            margin: 15px;
-            padding: 10px;   
+            @include mixinIconosCuatro(75px,75px) 
            
         }
         #footerUno{
@@ -219,10 +217,7 @@
                             "footCinco" ;
         gap: 2px;                   
         #faceFoot, #instaFoot, #twitFoot{
-            width: 85px;
-            height: 85px;
-            margin: 15px;
-            padding: 10px;     
+            @include mixinIconosCuatro(85px,85px)     
         }
         #footerUno{
             grid-area: footUno;
@@ -271,10 +266,7 @@
                             "footCinco footCinco" ;
         gap: 2px;                   
         #faceFoot, #instaFoot, #twitFoot{
-            width: 85px;
-            height: 85px;
-            margin: 15px;
-            padding: 10px;   
+            @include mixinIconosCuatro(90px,90px) 
         }
         #footerUno{
             grid-area: footUno;

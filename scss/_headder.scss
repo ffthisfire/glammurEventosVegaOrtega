@@ -21,183 +21,172 @@ header{
         }
         /*NAV*/
         .navbar{
-        font-family: $fontNav;
-        background-color:#BF9F93;
-        text-align:center;
-        z-index: 3;
-        background-position: bottom;
-        
-            ul{
-            display:flex;
-            justify-content:space-between;
-            height: 3rem;
-            list-style: none;
+            font-family: $fontNav;
+            background-color:#BF9F93;
             
-                li{
-                width: 25%;
-                height: 2vh;
-                    
-                    a{
-                    color: white;
-                    text-decoration: none;
-                    display: block;
-                    transition:linear 1s;
-                    transform: translateY(-20px);
-                    }
-                    &:hover{
-                    text-decoration: underline;
-                    }
+            z-index: 3;
+            
+            
+                ul{
+                display:flex;
                 
-                }
-            }    
-
-        }
-
-
-    a { color: inherit; } 
-      
-    /*Media Qery Header Index*/
-    @media only screen and (max-width:468px){
-        header {
-                height: 24vh
+                
+                    li{
+                    width: 25%;
+                    height: 5.5vh;
+                        
+                        a{
+                        font-size: 5vh;
+                        font-weight: 500;
+                        text-decoration: none;
+                        transition:linear 0.5s;
+                        }
+                        
+                    
+                    }
+                }    
+        
             }
+    /*Media Qery Header Index*/
+@media only screen and (max-width:468px){
+    header {
+        height: 24vh
+    }
         #tituloHeader{
         font-size: 5vh;
         font-weight: 60px;
         transition: linear 0.5s;
         }
         .navbar{
-        height: 8vh;
+        
             ul{
-            flex-direction: column;
-            text-align: center;
-            align-items: center;
                 li{
-                background-color: #BF9F93;
-                width: 250px;
-                    a{
-                    font-family: $fontNav;
+                height: 5vh;
+                    a{                    
                     font-size: 4vh;
-                    font-weight: 300;    
+                    font-weight: 400;
                     }
-                }
+                    & a:hover{
+                        text-decoration: underline;
+                        font-size: 4.5vh;
+                        font-weight: 500;    
+                        }
+                 }
             }
         }  
+}
+@media only screen and (min-width:468px){
+    header {
+        height: 24vh
     }
-    @media only screen and (min-width:468px){
-        header {
-            height: 24vh
-        }
         #tituloHeader{
         font-size: 5vh;
         font-weight: 60px;
-        transition: 0.5s;
-        }
-        .navbar{height: 8vh;
-            ul{
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-                li{
-                    background-color: #BF9F93;
-                    width: 250px;
-                    a{
-                    font-family: $fontNav;
-                    font-size: 5vh ;
-                    font-weight: 300;    
-                    }
-                }
-            }
-        }
-    }
-    
-    @media only screen and (min-width:600px){
-        header {
-            height: 24vh
-        }
-        #tituloHeader{
-        font-size: 8vh;
-        font-weight: 60px;
         transition: linear 0.5s;
         }
-        .navbar{height: 8vh;
-            font-size:3.2vh;
-            ul{
-            flex-direction: column;
-            text-align: center;
-            align-items: center;
-                li{
-                background-color: #BF9F93;
-                width: 250px;
-                    a{
-                    font-family: $fontNav;
-                    font-size: 5vh ;
-                    font-weight: 300;    
-                    }
-                }
-            }
-        }
-    }  
+        .navbar{
         
-    @media only screen and (min-width:768px){
-    
-        header {
-            height: 24vh
+            ul{
+                li{
+                height: 5vh;
+                    a{                    
+                    font-size: 4vh;
+                    font-weight: 400;
+                    }
+                    & a:hover{
+                        text-decoration: underline;
+                        font-size: 4.5vh;
+                        font-weight: 500;    
+                        }
+                 }
             }
+        }  
+}
+@media only screen and (min-width:600px){
+    header {
+        height: 24vh
+    }
         #tituloHeader{
         font-size: 5vh;
         font-weight: 60px;
         transition: linear 0.5s;
         }
-        .navbar{height: 8vh;
-           ul{
-            flex-direction: column;
-            text-align: center;
-            align-items: center;
+        .navbar{
+        
+            ul{
                 li{
-                background-color: #BF9F93;
-                width: 250px;
-                    a{
-                    font-family: $fontTitulos;
-                    font-size: 5vh ;
-                    font-weight: 300;    
+                height: 5vh;
+                    a{                    
+                    font-size: 4vh;
+                    font-weight: 400;
                     }
-                }
-            }    
-        }
-    }
-    @media only screen and (min-width:992px){
-        header {
-            height: 24vh
+                    & a:hover{
+                        text-decoration: underline;
+                        font-size: 4.5vh;
+                        font-weight: 500;    
+                        }
+                 }
             }
+        }  
+}
+@media only screen and (min-width:768px){
+    header {
+        height: 24vh
+    }
         #tituloHeader{
-        font-size: 50vh;
+        font-size: 5vh;
+        font-weight: 60px;
+        transition: linear 0.5s;
+        }
+        .navbar{
+        
+            ul{
+                li{
+                height: 5vh;
+                    a{                    
+                    font-size: 4vh;
+                    font-weight: 400;
+                    }
+                    & a:hover{
+                        text-decoration: underline;
+                        font-size: 4.5vh;
+                        font-weight: 500;    
+                        }
+                 }
+            }
+        }  
+}
+@media only screen and (min-width:992px){
+
+    header {
+        height: 50vh
+    }
+        #tituloHeader{
+        font-size: 10vh;
         font-weight: 120px;
-        transition:linear 0.5s;
+        transition: linear 0.5s;
         }
-        .navbar{height: 8vh;
-            width: 100%;
-            display: flex;
+        .navbar{
+        
             ul{
-            flex-direction: row;
-            text-align:justify;
-            align-items: flex-end;
-            justify-content: space-evenly;
-            width: 965px;
-                li a{
-                height: 4vh;
-                transform: translateY(-20px);
-                font-size: 5vh;
-                }
-                li a:hover{
-                    font-size: 6vh;
-                    height: 2vh;    
-                    transform: translateY(-35px);
-                }
+                li{
+                height: 8vh;
+                    a{                    
+                    font-size: 7vh;
+                    font-weight: 400;
+                    }
+                    & a:hover{
+                        text-decoration: underline;
+                        font-size: 8vh;
+                        font-weight: 500;    
+                        }
+                 }
             }
-        }
-    }
-        
-        
+        }  
+}
+    
+    
+
+
 }
 

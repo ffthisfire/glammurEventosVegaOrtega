@@ -25,27 +25,17 @@ header {
   header .navbar {
     font-family: "Corinthia", cursive;
     background-color: #BF9F93;
-    text-align: center;
-    z-index: 3;
-    background-position: bottom; }
+    z-index: 3; }
     header .navbar ul {
-      display: flex;
-      justify-content: space-between;
-      height: 3rem;
-      list-style: none; }
+      display: flex; }
       header .navbar ul li {
         width: 25%;
-        height: 2vh; }
+        height: 5.5vh; }
         header .navbar ul li a {
-          color: white;
+          font-size: 5vh;
+          font-weight: 500;
           text-decoration: none;
-          display: block;
-          transition: linear 1s;
-          transform: translateY(-20px); }
-        header .navbar ul li:hover {
-          text-decoration: underline; }
-  header a {
-    color: inherit; }
+          transition: linear 0.5s; }
   @media only screen and (max-width: 468px) {
     header header {
       height: 24vh; }
@@ -53,60 +43,47 @@ header {
       font-size: 5vh;
       font-weight: 60px;
       transition: linear 0.5s; }
-    header .navbar {
-      height: 8vh; }
-      header .navbar ul {
-        flex-direction: column;
-        text-align: center;
-        align-items: center; }
-        header .navbar ul li {
-          background-color: #BF9F93;
-          width: 250px; }
-          header .navbar ul li a {
-            font-family: "Corinthia", cursive;
-            font-size: 4vh;
-            font-weight: 300; } }
+    header .navbar ul li {
+      height: 5vh; }
+      header .navbar ul li a {
+        font-size: 4vh;
+        font-weight: 400; }
+      header .navbar ul li a:hover {
+        text-decoration: underline;
+        font-size: 4.5vh;
+        font-weight: 500; } }
   @media only screen and (min-width: 468px) {
     header header {
       height: 24vh; }
     header #tituloHeader {
       font-size: 5vh;
       font-weight: 60px;
-      transition: 0.5s; }
-    header .navbar {
-      height: 8vh; }
-      header .navbar ul {
-        flex-direction: column;
-        text-align: center;
-        align-items: center; }
-        header .navbar ul li {
-          background-color: #BF9F93;
-          width: 250px; }
-          header .navbar ul li a {
-            font-family: "Corinthia", cursive;
-            font-size: 5vh;
-            font-weight: 300; } }
+      transition: linear 0.5s; }
+    header .navbar ul li {
+      height: 5vh; }
+      header .navbar ul li a {
+        font-size: 4vh;
+        font-weight: 400; }
+      header .navbar ul li a:hover {
+        text-decoration: underline;
+        font-size: 4.5vh;
+        font-weight: 500; } }
   @media only screen and (min-width: 600px) {
     header header {
       height: 24vh; }
     header #tituloHeader {
-      font-size: 8vh;
+      font-size: 5vh;
       font-weight: 60px;
       transition: linear 0.5s; }
-    header .navbar {
-      height: 8vh;
-      font-size: 3.2vh; }
-      header .navbar ul {
-        flex-direction: column;
-        text-align: center;
-        align-items: center; }
-        header .navbar ul li {
-          background-color: #BF9F93;
-          width: 250px; }
-          header .navbar ul li a {
-            font-family: "Corinthia", cursive;
-            font-size: 5vh;
-            font-weight: 300; } }
+    header .navbar ul li {
+      height: 5vh; }
+      header .navbar ul li a {
+        font-size: 4vh;
+        font-weight: 400; }
+      header .navbar ul li a:hover {
+        text-decoration: underline;
+        font-size: 4.5vh;
+        font-weight: 500; } }
   @media only screen and (min-width: 768px) {
     header header {
       height: 24vh; }
@@ -114,44 +91,31 @@ header {
       font-size: 5vh;
       font-weight: 60px;
       transition: linear 0.5s; }
-    header .navbar {
-      height: 8vh; }
-      header .navbar ul {
-        flex-direction: column;
-        text-align: center;
-        align-items: center; }
-        header .navbar ul li {
-          background-color: #BF9F93;
-          width: 250px; }
-          header .navbar ul li a {
-            font-family: "Corinthia", cursive;
-            font-size: 5vh;
-            font-weight: 300; } }
+    header .navbar ul li {
+      height: 5vh; }
+      header .navbar ul li a {
+        font-size: 4vh;
+        font-weight: 400; }
+      header .navbar ul li a:hover {
+        text-decoration: underline;
+        font-size: 4.5vh;
+        font-weight: 500; } }
   @media only screen and (min-width: 992px) {
     header header {
-      height: 24vh; }
+      height: 50vh; }
     header #tituloHeader {
-      font-size: 50vh;
+      font-size: 10vh;
       font-weight: 120px;
       transition: linear 0.5s; }
-    header .navbar {
-      height: 8vh;
-      width: 100%;
-      display: flex; }
-      header .navbar ul {
-        flex-direction: row;
-        text-align: justify;
-        align-items: flex-end;
-        justify-content: space-evenly;
-        width: 965px; }
-        header .navbar ul li a {
-          height: 4vh;
-          transform: translateY(-20px);
-          font-size: 5vh; }
-        header .navbar ul li a:hover {
-          font-size: 6vh;
-          height: 2vh;
-          transform: translateY(-35px); } }
+    header .navbar ul li {
+      height: 8vh; }
+      header .navbar ul li a {
+        font-size: 7vh;
+        font-weight: 400; }
+      header .navbar ul li a:hover {
+        text-decoration: underline;
+        font-size: 8vh;
+        font-weight: 500; } }
 
 /*FOOT*/
 /*footer con redes, info de contactos, e info afip*/
@@ -291,8 +255,8 @@ footer {
     grid-template-areas: "footUno" "footDos" "footTres" "footCuatro" "footCinco";
     gap: 2px; }
     footer #faceFoot, footer #instaFoot, footer #twitFoot {
-      width: 85px;
-      height: 85px;
+      width: 75px;
+      height: 75px;
       margin: 15px;
       padding: 10px; }
     footer #footerUno {
@@ -385,8 +349,8 @@ footer {
     grid-template-areas: "footUno footDos" "footTres footCuatro" "footCinco footCinco";
     gap: 2px; }
     footer #faceFoot, footer #instaFoot, footer #twitFoot {
-      width: 85px;
-      height: 85px;
+      width: 90px;
+      height: 90px;
       margin: 15px;
       padding: 10px; }
     footer #footerUno {
@@ -437,21 +401,25 @@ footer {
       justify-content: center;
       align-content: center;
       text-align: center;
-      padding: 2%; }
+      padding: 2%;
+      object-fit: cover; }
   #indexMain #sectionUno {
     background-color: #F2DDD0;
     grid-area: section;
-    padding: 5%;
+    padding: 6%;
     text-align: center; }
-  #indexMain #titSection {
-    font-size: 4vh;
+  #indexMain .texto_cuerpo, #indexMain .texto_titulo, #indexMain .texto_resaltado, #indexMain #nosotrosMain section .texto_titulo2, #nosotrosMain section #indexMain .texto_titulo2, #indexMain #nosotrosMain section .texto_cuerpo2, #nosotrosMain section #indexMain .texto_cuerpo2 {
+    font-size: 3vh;
+    font-weight: 200;
+    font-family: 'Arvo', serif;
+    text-align: center;
+    margin: 10px; }
+  #indexMain .texto_titulo {
+    font-size: 4.5vh;
     font-weight: 700; }
-    #indexMain #titSection #p1Section {
-      font-size: 3vh;
-      font-weight: 200; }
-    #indexMain #titSection #p2Section {
-      font-size: 3vh;
-      font-weight: 400; }
+  #indexMain .texto_resaltado {
+    font-size: 3vh;
+    font-weight: 700; }
   #indexMain #articleUno {
     background-color: #F2DDD0;
     grid-area: article;
@@ -518,26 +486,23 @@ footer {
 #nosotrosMain {
   background-color: #F2F2F2;
   width: 100%;
-  display: grid; }
-
-/*Breve reseña historica de la empresa*/
-#nosotrosMain section {
-  background-color: #F2F2F2;
-  font-family: 'Arvo', serif;
-  font-size: 2.1vh;
-  grid-area: section;
-  padding: 5%; }
-
-/*Foto de Dueña*/
-#imgMur {
-  height: 100%;
-  width: 95%;
-  grid-area: imgMur; }
-
-/*Video*/
-#nosotrosMainDiv {
-  border: solid,2px,blue;
-  grid-area: div; }
+  display: grid;
+  /*Breve reseña historica de la empresa*/
+  /*Foto de Dueña*/
+  /*Video*/ }
+  #nosotrosMain section {
+    background-color: #F2F2F2;
+    grid-area: section;
+    padding: 5%; }
+    #nosotrosMain section .texto_cuerpo2 {
+      text-align: justify; }
+  #nosotrosMain #imgMur {
+    height: 100%;
+    width: 95%;
+    grid-area: imgMur; }
+  #nosotrosMain #nosotrosMainDiv {
+    border: solid,2px,blue;
+    grid-area: div; }
 
 /*Media Qery Main Nosotros*/
 @media only screen and (max-width: 468px) {
@@ -547,24 +512,30 @@ footer {
     grid-template-columns: 100%;
     gap: 0.5rem;
     grid-template-areas: "section" "imgMur" "div"; }
-  #nosotrosMainDiv section {
-    height: 295px;
-    width: 100%;
-    justify-content: center; }
-  #nosotrosMainDiv iframe {
-    height: 340px;
-    width: 100%;
-    text-align: center;
-    align-items: stretch;
-    padding: 1%; }
-  #imgMur {
-    width: auto;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center;
-    padding: 1%;
-    text-align: center; } }
+    #nosotrosMain section {
+      height: 295px;
+      width: 100%;
+      justify-content: center; }
+      #nosotrosMain section .texto_titulo2 {
+        font-weight: 600;
+        font-size: 3vh; }
+      #nosotrosMain section .texto_cuerpo2 {
+        font-weight: 400;
+        font-size: 2vh; }
+    #nosotrosMain #imgMur {
+      width: auto;
+      height: 100%;
+      justify-items: center;
+      align-self: center;
+      background-position: center;
+      padding: 1%;
+      text-align: center; }
+    #nosotrosMain #nosotrosMainDiv iframe {
+      height: 340px;
+      width: 100%;
+      text-align: center;
+      align-items: stretch;
+      padding: 1%; } }
 
 @media only screen and (min-width: 468px) {
   #nosotrosMain {
@@ -573,78 +544,96 @@ footer {
     grid-template-columns: 100%;
     gap: 0.5rem;
     grid-template-areas: "section" "imgMur" "div"; }
-  #nosotrosMainDiv section {
-    height: 295px;
-    width: 100%;
-    justify-content: center; }
-  #nosotrosMainDiv iframe {
-    height: 340px;
-    width: 100%;
-    text-align: center;
-    align-items: stretch;
-    padding: 1%; }
-  #imgMur {
-    width: auto;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center;
-    padding: 1%;
-    text-align: center; } }
+    #nosotrosMain section {
+      height: 295px;
+      width: 100%;
+      justify-content: center; }
+      #nosotrosMain section .texto_titulo2 {
+        font-weight: 700;
+        font-size: 3.5vh; }
+      #nosotrosMain section .texto_cuerpo2 {
+        font-weight: 500;
+        font-size: 2.1vh; }
+    #nosotrosMain #nosotrosMainDiv iframe {
+      height: 340px;
+      width: 100%;
+      text-align: center;
+      align-items: stretch;
+      padding: 1%; }
+    #nosotrosMain #imgMur {
+      width: auto;
+      height: 100%;
+      justify-items: center;
+      align-self: center;
+      background-position: center;
+      padding: 1%;
+      text-align: center; } }
 
 @media only screen and (min-width: 600px) {
   #nosotrosMain {
-    height: 1020px;
-    grid-template-rows: 350px 300px 350px;
+    height: 1100px;
+    grid-template-rows: 430px 300px 350px;
     grid-template-columns: 100%;
     gap: 0.5rem;
     grid-template-areas: "section" "imgMur" "div"; }
-  #nosotrosMainDiv section {
-    height: 295px;
-    width: 100%;
-    justify-content: center; }
-  #nosotrosMainDiv iframe {
-    height: 340px;
-    width: 100%;
-    text-align: center;
-    align-items: stretch;
-    padding: 1%; }
-  #imgMur {
-    width: auto;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center;
-    padding: 1%;
-    text-align: center; } }
+    #nosotrosMain section {
+      height: 295px;
+      width: 100%;
+      justify-content: center; }
+      #nosotrosMain section .texto_titulo2 {
+        font-weight: 700;
+        font-size: 3.5vh; }
+      #nosotrosMain section .texto_cuerpo2 {
+        font-weight: 500;
+        font-size: 2.2vh; }
+    #nosotrosMain #nosotrosMainDiv iframe {
+      height: 340px;
+      width: 100%;
+      text-align: center;
+      align-items: stretch;
+      padding: 1%; }
+    #nosotrosMain #imgMur {
+      width: auto;
+      height: 100%;
+      justify-items: center;
+      align-self: center;
+      background-position: center;
+      padding: 1%;
+      text-align: center; } }
 
 @media only screen and (min-width: 768px) {
   #nosotrosMain {
-    height: 950px;
-    grid-template-rows: 450px 450px;
+    height: 970px;
+    grid-template-rows: 470px 450px;
     grid-template-columns: 50% 50%;
     gap: 0.5rem;
     grid-template-areas: "section imgMur" "div div"; }
-  #nosotrosMainDiv section {
-    height: 295px;
-    width: 100%;
-    font-size: 2vh; }
-  #imgMur {
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center;
-    padding: 5%; }
-  #nosotrosMainDiv iframe {
-    height: 520px;
-    width: 99%;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    justify-content: center;
-    padding: 5%; } }
+    #nosotrosMain section {
+      height: 295px;
+      width: 100%;
+      font-size: 2vh; }
+      #nosotrosMain section .texto_titulo2 {
+        font-weight: 700;
+        font-size: 3.5vh; }
+      #nosotrosMain section .texto_cuerpo2 {
+        font-weight: 500;
+        font-size: 2vh; }
+    #nosotrosMain #imgMur {
+      width: 100%;
+      height: 100%;
+      justify-items: center;
+      align-self: center;
+      background-position: center;
+      padding: 5%; }
+    #nosotrosMain #nosotrosMainDiv iframe {
+      height: 520px;
+      width: 99%;
+      text-align: center;
+      align-items: center;
+      align-content: center;
+      align-self: center;
+      justify-content: center;
+      padding: 5%; } }
 
 @media only screen and (min-width: 992px) {
   #nosotrosMain {
@@ -653,25 +642,31 @@ footer {
     grid-template-columns: 50% 50%;
     gap: 0.5rem;
     grid-template-areas: "section imgMur" "div div"; }
-  #nosotrosMainDiv section {
-    height: 295px;
-    width: 100%; }
-  #imgMur {
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center;
-    padding: 1%; }
-  #nosotrosMainDiv iframe {
-    height: 520px;
-    width: 99%;
-    text-align: center;
-    align-items: center;
-    align-content: center;
-    align-self: center;
-    justify-content: center;
-    padding: 5%; } }
+    #nosotrosMain section {
+      height: 295px;
+      width: 100%; }
+      #nosotrosMain section .texto_titulo2 {
+        font-weight: 800;
+        font-size: 4vh; }
+      #nosotrosMain section .texto_cuerpo2 {
+        font-weight: 500;
+        font-size: 2.2vh; }
+    #nosotrosMain #imgMur {
+      width: 100%;
+      height: 100%;
+      justify-items: center;
+      align-self: center;
+      background-position: center;
+      padding: 1%; }
+    #nosotrosMain #nosotrosMainDiv iframe {
+      height: 520px;
+      width: 99%;
+      text-align: center;
+      align-items: center;
+      align-content: center;
+      align-self: center;
+      justify-content: center;
+      padding: 5%; } }
 
 /*MAIN SERVICIOS*/
 #serviciosMain {
