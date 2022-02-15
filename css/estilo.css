@@ -24,7 +24,7 @@ header {
     text-align: center; }
   header .navbar {
     font-family: "Corinthia", cursive;
-    background-color: #BF9F93;
+    background-color: #bf9f93;
     z-index: 3; }
     header .navbar ul {
       display: flex; }
@@ -106,16 +106,18 @@ header {
     header #tituloHeader {
       font-size: 10vh;
       font-weight: 120px;
-      transition: linear 0.5s; }
-    header .navbar ul li {
-      height: 8vh; }
-      header .navbar ul li a {
-        font-size: 7vh;
-        font-weight: 400; }
-      header .navbar ul li a:hover {
-        text-decoration: underline;
-        font-size: 8vh;
-        font-weight: 500; } }
+      transition: linear 500ms ease-in; }
+    header .navbar {
+      height: 7.5vh; }
+      header .navbar ul li {
+        height: 8vh; }
+        header .navbar ul li a {
+          font-size: 6vh;
+          font-weight: 400; }
+        header .navbar ul li a:hover {
+          text-decoration: underline;
+          font-size: 6.5vh;
+          font-weight: 500; } }
 
 /*FOOT*/
 /*footer con redes, info de contactos, e info afip*/
@@ -382,7 +384,8 @@ footer {
 
 * {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 /*MAIN INDEX*/
 #indexMain {
@@ -408,13 +411,13 @@ footer {
     grid-area: section;
     padding: 6%;
     text-align: center; }
-  #indexMain .texto_cuerpo, #indexMain .texto_titulo, #indexMain .texto_resaltado, #indexMain #nosotrosMain section .texto_titulo2, #nosotrosMain section #indexMain .texto_titulo2, #indexMain #nosotrosMain section .texto_cuerpo2, #nosotrosMain section #indexMain .texto_cuerpo2 {
+  #indexMain .texto_cuerpo, #indexMain .texto_titulo, #indexMain #galeriaMain h2, #galeriaMain #indexMain h2, #indexMain .texto_resaltado, #indexMain #nosotrosMain section .texto_titulo2, #nosotrosMain section #indexMain .texto_titulo2, #indexMain #nosotrosMain section .texto_cuerpo2, #nosotrosMain section #indexMain .texto_cuerpo2, #indexMain #contactanosMain h2, #contactanosMain #indexMain h2 {
     font-size: 3vh;
     font-weight: 200;
     font-family: 'Arvo', serif;
     text-align: center;
     margin: 10px; }
-  #indexMain .texto_titulo {
+  #indexMain .texto_titulo, #indexMain #galeriaMain h2, #galeriaMain #indexMain h2 {
     font-size: 4.5vh;
     font-weight: 700; }
   #indexMain .texto_resaltado {
@@ -670,28 +673,27 @@ footer {
 
 /*MAIN SERVICIOS*/
 #serviciosMain {
+  /*TEXTOS PARA LINKS CON DISTINTA INFO SOBRE CADA SERVICIO*/
   display: grid;
   width: 100%; }
-
-/*TEXTOS PARA LINKS CON DISTINTA INFO SOBRE CADA SERVICIO*/
-#serviciosMainDivDos {
-  display: grid; }
-
-#servSocial {
-  font-family: 'Arvo', serif;
-  background-color: #559b9b; }
-
-#servComercial {
-  font-family: 'Arvo', serif;
-  background-color: #559b9b; }
-
-#servProductos {
-  font-family: 'Arvo', serif;
-  background-color: #559b9b; }
-
-#servMultimedia {
-  font-family: 'Arvo', serif;
-  background-color: #559b9b; }
+  #serviciosMain #serviciosMainDivDos {
+    display: grid; }
+    #serviciosMain #serviciosMainDivDos #servSocial {
+      font-family: 'Arvo', serif;
+      background-color: #559b9b;
+      grid-area: eventos; }
+    #serviciosMain #serviciosMainDivDos #servComercial {
+      font-family: 'Arvo', serif;
+      background-color: #559b9b;
+      grid-area: comercial; }
+    #serviciosMain #serviciosMainDivDos #servProductos {
+      font-family: 'Arvo', serif;
+      background-color: #559b9b;
+      grid-area: productos; }
+    #serviciosMain #serviciosMainDivDos #servMultimedia {
+      font-family: 'Arvo', serif;
+      background-color: #559b9b;
+      grid-area: otros; }
 
 /*Media Qery Main Servicios*/
 @media only screen and (max-width: 468px) {
@@ -701,15 +703,7 @@ footer {
     grid-template-columns: 100%;
     gap: 0.2rem;
     grid-template-areas: "eventos" "comercial" "productos" "multimedia";
-    padding: 20px; }
-  #servSocial {
-    grid-area: eventos; }
-  #servComercial {
-    grid-area: comercial; }
-  #servProductos {
-    grid-area: productos; }
-  #servMultimedia {
-    grid-area: multimedia; } }
+    padding: 20px; } }
 
 @media only screen and (min-width: 468px) {
   #serviciosMainDivDos {
@@ -755,340 +749,120 @@ footer {
     padding: 20px; } }
 
 /* MAIN GALERIA*/
-#galeriaMain section {
-  display: grid;
-  height: auto;
-  width: 100%; }
+#galeriaMain h2 {
+  padding: 0.8em 0 .4em;
+  text-align: center; }
 
-#galeriaMain section div {
-  max-width: 100%; }
+#galeriaMain .gallery {
+  padding-bottom: 3em;
+  padding-top: 1em;
+  display: grid;
+  padding-left: .1em;
+  padding-right: .1em; }
+  #galeriaMain .gallery .galleryImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 500ms ease-out; }
+    #galeriaMain .gallery .galleryImg:hover {
+      transform: scale(1.3); }
+  #galeriaMain .gallery .galleryPicture {
+    position: relative;
+    overflow: hidden;
+    transition: all 500ms ease;
+    border-radius: 5px;
+    box-shadow: 1px 10px 10px rgba(129, 129, 129, 0.288); }
+    #galeriaMain .gallery .galleryPicture .capa {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(191, 159, 147, 0.7);
+      transition: all 500ms ease-out;
+      opacity: 0;
+      visibility: hidden;
+      text-align: center; }
+      #galeriaMain .gallery .galleryPicture .capa h3 {
+        color: white;
+        font-weight: 400;
+        margin-bottom: 50px;
+        transition: all 500ms ease-out;
+        margin-top: 10px; }
+      #galeriaMain .gallery .galleryPicture .capa p {
+        color: white;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.5;
+        width: 100%;
+        max-width: 220px;
+        margin: auto; }
+    #galeriaMain .gallery .galleryPicture:hover > .capa {
+      opacity: 1;
+      visibility: visible; }
+      #galeriaMain .gallery .galleryPicture:hover > .capa h3 {
+        margin-top: 50px;
+        margin-bottom: 15px; }
+    #galeriaMain .gallery .galleryPicture:hover > img {
+      transform: scale(1.09); }
+
+#galeriaMain .galleryPictureG1 {
+  grid-area: foto1; }
+
+#galeriaMain .galleryPictureG2 {
+  grid-area: foto2; }
+
+#galeriaMain .galleryPictureG3 {
+  grid-area: foto3; }
+
+#galeriaMain .galleryPictureG4 {
+  grid-area: foto4; }
+
+#galeriaMain .galleryPictureG5 {
+  grid-area: foto5; }
+
+#galeriaMain .galleryPictureG6 {
+  grid-area: foto6; }
+
+#galeriaMain .galleryPictureG7 {
+  grid-area: foto7; }
+
+#galeriaMain .galleryPictureG8 {
+  grid-area: foto8; }
 
 @media only screen and (max-width: 468px) {
-  #galeriaMain section {
-    grid-template-columns: 49% 49%;
-    grid-template-rows: 190px 190px 190px 230px 190px;
-    grid-template-areas: "foto1 foto2" "foto3 foto5" "foto3 foto6" "foto7 foto7" "foto8 foto9";
-    gap: 10px;
-    padding: 2px; }
-  #img1 {
-    grid-area: foto1;
-    background-color: burlywood;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img2 {
-    grid-area: foto2;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img6 {
-    grid-area: foto3;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img9 {
-    grid-area: foto5;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img3 {
-    grid-area: foto6;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img11 {
-    grid-area: foto7;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img4 {
-    grid-area: foto8;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img7 {
-    grid-area: foto9;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; } }
+  #galeriaMain .gallery {
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: 160px;
+    grid-template-areas: "foto1 foto1" "foto2 foto2" "foto3 foto5" "foto4 foto6" "foto7 foto6" "foto8 foto8";
+    gap: 0.8em; } }
 
 @media only screen and (min-width: 468px) {
-  #galeriaMain section {
-    grid-template-columns: 49% 49%;
-    grid-template-rows: 190px 190px 190px 230px 190px;
-    grid-template-areas: "foto1 foto2" "foto3 foto5" "foto3 foto6" "foto7 foto7" "foto8 foto9";
-    gap: 10px;
-    padding: 2px; }
-  #img1 {
-    grid-area: foto1;
-    background-color: burlywood;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img2 {
-    grid-area: foto2;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img6 {
-    grid-area: foto3;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img9 {
-    grid-area: foto5;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img3 {
-    grid-area: foto6;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img11 {
-    grid-area: foto7;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img4 {
-    grid-area: foto8;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img7 {
-    grid-area: foto9;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; } }
+  #galeriaMain .gallery {
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: 160px;
+    grid-template-areas: "foto1 foto1" "foto2 foto2" "foto3 foto5" "foto4 foto6" "foto7 foto6" "foto8 foto8";
+    gap: 0.8em; } }
 
 @media only screen and (min-width: 600px) {
-  #galeriaMain section {
-    grid-template-columns: 49% 49%;
-    grid-template-rows: 190px 190px 190px 230px 190px;
-    grid-template-areas: "foto1 foto2" "foto3 foto5" "foto3 foto6" "foto7 foto7" "foto8 foto9";
-    gap: 10px;
-    padding: 2px; }
-  #img1 {
-    grid-area: foto1;
-    background-color: burlywood;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img2 {
-    grid-area: foto2;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img6 {
-    grid-area: foto3;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img9 {
-    grid-area: foto5;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img3 {
-    grid-area: foto6;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img11 {
-    grid-area: foto7;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img4 {
-    grid-area: foto8;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img7 {
-    grid-area: foto9;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; } }
+  #galeriaMain .gallery {
+    grid-template-columns: repeat(2, 50%);
+    grid-auto-rows: 200px;
+    grid-template-areas: "foto1 foto1" "foto2 foto2" "foto3 foto5" "foto4 foto6" "foto7 foto6" "foto7 foto6" "foto8 foto8";
+    gap: 0.8em; } }
 
 @media only screen and (min-width: 768px) {
-  #galeriaMain section {
-    grid-template-columns: 49% 49%;
-    grid-template-rows: 190px 190px 190px 230px 190px;
-    grid-template-areas: "foto1 foto2" "foto3 foto5" "foto3 foto6" "foto7 foto7" "foto8 foto9";
-    gap: 10px;
-    padding: 2px; }
-  #img1 {
-    grid-area: foto1;
-    background-color: burlywood;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img2 {
-    grid-area: foto2;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img6 {
-    grid-area: foto3;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img9 {
-    grid-area: foto5;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img3 {
-    grid-area: foto6;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img11 {
-    grid-area: foto7;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img4 {
-    grid-area: foto8;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img7 {
-    grid-area: foto9;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; } }
+  #galeriaMain .gallery {
+    grid-template-columns: repeat(4, 25%);
+    grid-auto-rows: 160px;
+    grid-template-areas: "foto1 foto1 foto2 foto2" "foto1 foto1 foto2 foto2" "foto4 foto4 foto3 foto3" "foto4 foto4 foto3 foto3" "foto5 foto5 foto6 foto6" "foto5 foto5 foto6 foto6" "foto7 foto7 foto6 foto6" "foto7 foto7 foto6 foto6" "foto8 foto8 foto8 foto8" "foto8 foto8 foto8 foto8";
+    gap: 0.4em; } }
 
 @media only screen and (min-width: 992px) {
-  #galeriaMain {
-    height: 630px; }
-  #galeriaMain section {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 200px 200px 200px;
-    grid-template-areas: "foto1 foto2 foto3" "foto6 foto5 foto3" "foto8 foto9 foto7";
-    gap: 10px;
-    padding: 2px; }
-  #img1 {
-    grid-area: foto1;
-    background-color: burlywood;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img2 {
-    grid-area: foto2;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img6 {
-    grid-area: foto3;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img9 {
-    grid-area: foto5;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img3 {
-    grid-area: foto6;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img11 {
-    grid-area: foto7;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img4 {
-    grid-area: foto8;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; }
-  #img7 {
-    grid-area: foto9;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    align-self: center;
-    background-position: center; } }
+  #galeriaMain .gallery {
+    grid-template-columns: repeat(4, 25%);
+    grid-auto-rows: 160px;
+    grid-template-areas: "foto1 foto1 foto2 foto2" "foto1 foto1 foto2 foto2" "foto3 foto4 foto4 foto5" "foto3 foto4 foto4 foto5" "foto3 foto7 foto7 foto6" "foto8 foto7 foto7 foto6" "foto8 foto7 foto7 foto6";
+    gap: 0.4em; } }
 
 /* MAIN CONTACTO*/
 /*FORMULARIO DE CONTACTO*/
@@ -1099,106 +873,107 @@ footer {
   align-items: center;
   align-self: center;
   padding: 11px; }
-
-#contactanosMain section form {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  align-self: center; }
-
-#nombreUno {
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 5px; }
-
-#nombreDos {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #BF9F93; }
-
-#emailUno {
-  font-family: Arial, Helvetica, sans-serif; }
-
-#emailDos {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #BF9F93; }
-
-#telefonoUno {
-  font-family: Arial, Helvetica, sans-serif; }
-
-#telefonoDos {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #BF9F93;
-  left: 10px; }
-
-textarea {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 40px;
-  background-color: #BF9F93;
-  left: 10px;
-  border: 2px,orange;
-  margin-right: 10px; }
-
-#botonSend, #botonReset {
-  font-weight: 2px;
-  margin: 2%;
-  padding: 5px;
-  border: solid, 2px;
-  background-color: #BF9F93; }
-
-#nombreDos:focus {
-  height: 30px;
-  width: 280px; }
-
-#emailDos:focus {
-  height: 30px;
-  width: 280px; }
-
-#telefonoDos:focus {
-  height: 30px;
-  width: 280px; }
-
-textarea:focus {
-  background-color: burlywood; }
+  #contactanosMain h2 {
+    padding-top: 2rem;
+    font-weight: 600; }
+  #contactanosMain section form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-self: center; }
+    #contactanosMain section form #nombreUno {
+      font-family: Arial, Helvetica, sans-serif;
+      padding: 5px; }
+    #contactanosMain section form #nombreDos {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #BF9F93; }
+    #contactanosMain section form #emailUno {
+      font-family: Arial, Helvetica, sans-serif; }
+    #contactanosMain section form #emailDos {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #BF9F93; }
+    #contactanosMain section form #telefonoUno {
+      font-family: Arial, Helvetica, sans-serif; }
+    #contactanosMain section form #telefonoDos {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #BF9F93;
+      left: 10px; }
+    #contactanosMain section form textarea {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 40px;
+      background-color: #BF9F93;
+      left: 10px;
+      border: 2px,orange;
+      margin-right: 10px; }
+    #contactanosMain section form #botonSend, #contactanosMain section form #botonReset {
+      font-weight: 2px;
+      margin: 2%;
+      padding: 5px;
+      border: solid, 2px;
+      background-color: #BF9F93; }
+    #contactanosMain section form #nombreDos:focus {
+      height: 30px;
+      width: 280px;
+      background-color: #bf9f93bd; }
+    #contactanosMain section form #emailDos:focus {
+      height: 30px;
+      width: 280px;
+      background-color: #bf9f93bd; }
+    #contactanosMain section form #telefonoDos:focus {
+      height: 30px;
+      width: 280px;
+      background-color: #bf9f93bd; }
+    #contactanosMain section form textarea:focus {
+      background-color: #bf9f93bd; }
 
 @media only screen and (max-width: 468px) {
   #contactanosMain {
-    height: 1100px; }
-  #contactanosMain h2 {
-    grid-area: h2; }
-  #nombreUno {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 8px;
-    grid-area: nombreUno; }
-  #nombreDos {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px;
-    height: 25px;
-    width: 250px;
-    grid-area: nombreDos; }
-  #emailUno {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px;
-    grid-area: emailUno; }
-  #emailDos {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px; }
-  #telefonoUno {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px; }
-  #telefonoDos {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px; }
-  textarea {
-    font-size: 20px;
-    padding: 10px;
-    height: 350px;
-    width: 400px; } }
+    height: 1100px h2;
+      height-grid-area: h2; }
+    #contactanosMain .nombre__Uno {
+      display: flex;
+      flex-direction: row; }
+    #contactanosMain #nombreUno {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 8px; }
+    #contactanosMain #nombreDos {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px;
+      height: 50px;
+      width: 260px;
+      transition: all 1s; }
+    #contactanosMain #emailUno {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px;
+      grid-area: emailUno; }
+    #contactanosMain #emailDos {
+      height: 25px;
+      width: 250px;
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px;
+      transition: all 1s; }
+    #contactanosMain #telefonoUno {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px; }
+    #contactanosMain #telefonoDos {
+      height: 25px;
+      width: 250px;
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px;
+      transition: all 1s; }
+    #contactanosMain textarea {
+      font-size: 20px;
+      padding: 10px;
+      height: 350px;
+      width: 400px;
+      transition: all 1s; } }
 
 @media only screen and (min-width: 468px) {
   #nombreUno {
@@ -1237,8 +1012,8 @@ textarea:focus {
   textarea {
     font-size: 20px;
     padding: 10px;
-    height: 350px;
-    width: 400px;
+    height: 300px;
+    width: 200px;
     transition: all 1s; } }
 
 @media only screen and (min-width: 600px) {
@@ -1282,81 +1057,133 @@ textarea:focus {
     width: 400px; } }
 
 @media only screen and (min-width: 768px) {
+  #contactanosMain {
+    flex-direction: column; }
+  .nombre__Uno {
+    display: flex;
+    flex-direction: row;
+    height: 45px; }
   #nombreUno {
     font-size: 20px;
     line-height: 40px;
-    padding: 8px; }
+    padding: 8px;
+    width: 250px;
+    align-items: center;
+    justify-content: end; }
   #nombreDos {
     font-size: 20px;
     line-height: 40px;
     padding: 10px;
-    height: 25px;
+    height: 40px;
     width: 250px;
-    transition: all 1s; }
+    transition: all 1s;
+    justify-content: flex-start; }
+  .email__Uno {
+    display: flex;
+    flex-direction: row;
+    height: 45px; }
   #emailUno {
     font-size: 20px;
     line-height: 40px;
-    padding: 10px; }
+    padding: 8px;
+    width: 250px;
+    align-items: center;
+    justify-content: end; }
   #emailDos {
     font-size: 20px;
     line-height: 40px;
     padding: 10px;
-    height: 25px;
+    height: 40px;
     width: 250px;
-    transition: all 1s; }
+    transition: all 1s;
+    justify-content: flex-start; }
+  .tel__Uno {
+    display: flex;
+    flex-direction: row;
+    height: 45px; }
   #telefonoUno {
     font-size: 20px;
     line-height: 40px;
-    padding: 10px; }
+    padding: 8px;
+    width: 250px;
+    align-items: center;
+    justify-content: end; }
   #telefonoDos {
     font-size: 20px;
     line-height: 40px;
     padding: 10px;
-    height: 25px;
+    height: 40px;
     width: 250px;
-    transition: all 1s; }
+    transition: all 1s;
+    justify-content: flex-start; }
   textarea {
     font-size: 20px;
     padding: 10px;
     height: 350px;
-    width: 400px; } }
+    width: 350px; } }
 
 @media only screen and (min-width: 992px) {
+  #contactanosMain {
+    flex-direction: column; }
+  .nombre__Uno {
+    display: flex;
+    flex-direction: row;
+    height: 45px; }
   #nombreUno {
     font-size: 20px;
     line-height: 40px;
-    padding: 8px; }
+    padding: 8px;
+    width: 250px;
+    align-items: center;
+    justify-content: end; }
   #nombreDos {
     font-size: 20px;
     line-height: 40px;
     padding: 10px;
-    height: 25px;
+    height: 40px;
     width: 250px;
-    transition: all 1s; }
+    transition: all 500ms;
+    justify-content: flex-start; }
+  .email__Uno {
+    display: flex;
+    flex-direction: row;
+    height: 45px; }
   #emailUno {
     font-size: 20px;
     line-height: 40px;
-    padding: 10px; }
+    padding: 8px;
+    width: 250px;
+    align-items: center;
+    justify-content: end; }
   #emailDos {
     font-size: 20px;
     line-height: 40px;
     padding: 10px;
-    height: 25px;
+    height: 40px;
     width: 250px;
-    transition: all 1s; }
+    transition: all 1s;
+    justify-content: flex-start; }
+  .tel__Uno {
+    display: flex;
+    flex-direction: row;
+    height: 45px; }
   #telefonoUno {
     font-size: 20px;
     line-height: 40px;
-    padding: 10px; }
+    padding: 8px;
+    width: 250px;
+    align-items: center;
+    justify-content: end; }
   #telefonoDos {
     font-size: 20px;
     line-height: 40px;
     padding: 10px;
-    height: 25px;
+    height: 40px;
     width: 250px;
-    transition: all 1s; }
+    transition: all 1s;
+    justify-content: flex-start; }
   textarea {
     font-size: 20px;
     padding: 10px;
     height: 350px;
-    width: 400px; } }
+    width: 350px; } }

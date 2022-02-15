@@ -22,8 +22,7 @@ header{
         /*NAV*/
         .navbar{
             font-family: $fontNav;
-            background-color:#BF9F93;
-            
+            background-color:rgb(191, 159, 147);
             z-index: 3;
             
             
@@ -31,15 +30,20 @@ header{
                 display:flex;
                 
                 
+                
                     li{
                     width: 25%;
                     height: 5.5vh;
+                    
+                    
                         
                         a{
                         font-size: 5vh;
                         font-weight: 500;
                         text-decoration: none;
                         transition:linear 0.5s;
+                        
+                        
                         }
                         
                     
@@ -164,20 +168,21 @@ header{
         #tituloHeader{
         font-size: 10vh;
         font-weight: 120px;
-        transition: linear 0.5s;
+        transition: linear 500ms ease-in;
         }
-        .navbar{
+        .navbar{ 
+            height: 7.5vh;
         
             ul{
                 li{
                 height: 8vh;
                     a{                    
-                    font-size: 7vh;
+                    font-size: 6vh;
                     font-weight: 400;
                     }
                     & a:hover{
                         text-decoration: underline;
-                        font-size: 8vh;
+                        font-size: 6.5vh;
                         font-weight: 500;    
                         }
                  }

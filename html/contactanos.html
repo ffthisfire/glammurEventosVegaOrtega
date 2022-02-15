@@ -30,9 +30,9 @@
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto">
                         <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                          <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
                           <a class="nav-link" href="../html/quienesSomos.html">Nosotros</a>
@@ -44,7 +44,7 @@
                           <a class="nav-link" href="../html/galeria.html">Galeria</a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="../html/contactanos.html">Contacto</a>
+                          <a class="nav-link active" href="../html/contactanos.html">Contacto</a>
                         </li>
                           
                         </li>
@@ -58,24 +58,32 @@
     <main id="contactanosMain">
         <h2>Contactanos</h2>
 
-       <section>
-            <form action="">
-                <label id="nombreUno" for="nombreCompleto">Ingrese su Nombre</label>
+       <section class="container-md">
+            <form action="" class="row">
+              <div class="nombre__Uno" class="row">
+                <label class="col col-sm-4 col-md-6 offset-md-3 col-xl-6 offset-xl-4" id="nombreUno" for="nombreCompleto">Ingrese su Nombre:</label>
                 <br>
-                <input id="nombreDos" type="text" placeholder="Nombre" id="nombreCompleto">
+                <input class="col col-md-6 col-xl-6 offset-xl-0" id="nombreDos" type="text" placeholder="Nombre" id="nombreCompleto">
                 <br>
+              </div>
+              <div class="email__Uno" class="row">
+                <label class="col col-sm-5 col-md-6 offset-md-3 col-xl-6 offset-xl-4" id="emailUno" for="emailCompleto">Ingrese E-mail:</label>
+                <br>
+                <input class="col col-md-6 col-xl-6 offset-xl-0" id="emailDos" type="text" placeholder="E-mail" id= "emailCompleto">
+                <br>
+              </div>  
+              <div class="tel__Uno" class="row">
+                <label class="col col-sm-5 col-md-6 offset-md-3 col-xl-12 offset-xl-4" id="telefonoUno" for="telefonoCompleto">Ingrese su Telefono:</label>
+                <br>
+                <input class="col col-md-6 col-xl-12 offset-xl-0" id="telefonoDos" type="text" placeholder="Telefono" id= "telefonoCompleto">
+                <br>
+              </div>  
 
-                <label id="emailUno" for="emailCompleto">Ingrese E-mail</label>
-                <br>
-                <input id="emailDos" type="text" placeholder="E-mail" id= "emailCompleto">
-                <br>
                 
-                <label id="telefonoUno" for="telefonoCompleto">Ingrese su Telefono</label>
-                <br>
-                <input id="telefonoDos" type="text" placeholder="Telefono" id= "telefonoCompleto">
-                <br>
+                
+                
 
-                <div id="consulta">
+                <div class="col col-xl-12" id="consulta">
                     <h2>Motivo de consulta</h2>
                         
                     <input type="radio" name="consulta">
@@ -88,11 +96,12 @@
                         Otros
                 </div>
                 <br>
-                <textarea name="" id="textArea" cols="30" rows="10"></textarea placeholder="Ingrese consulta">
+                <textarea class="col col-sm-7 col-md-7 col-xl-5"  name="" id="textArea" cols="30" rows="8"></textarea placeholder="Ingrese consulta">
                 
-            <div id="botones">
-                    <input id="botonSend" type="submit">
-                    <input id="botonReset"type="reset">
+              <div id="botones">
+                <button type="submit" type="button" id="botonSend" class="btn btn-outline-light">Enviar consulta</button>
+                <button type="reset" type="button" id="botonReset" class="btn btn-outline-light">Limpiar</button>  
+                    
             </div>
             
             </form>
