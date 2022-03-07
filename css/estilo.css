@@ -124,6 +124,13 @@ header {
 footer {
   display: grid;
   background-color: black; }
+  footer #faceFoot, footer #instaFoot, footer #twitFoot {
+    transition: all 500ms ease-out; }
+    footer #faceFoot:hover, footer #instaFoot:hover, footer #twitFoot:hover {
+      transform: scale(1.2);
+      filter: saturate(400%); }
+    footer #faceFoot :active, footer #instaFoot :active, footer #twitFoot :active {
+      transform: scale(1.3); }
   footer #footerUno h3, footer #footerUno h4 {
     font-family: "Arvo", serif;
     color: darkgray; }
@@ -166,7 +173,8 @@ footer {
       width: 65px;
       height: 65px;
       margin: 15px;
-      padding: 10px; }
+      padding: 10px;
+      transition: all 500ms ease-out; }
     footer #footerUno {
       grid-area: footUno;
       font-family: monospace;
@@ -397,7 +405,8 @@ footer {
   /*mapa del local*/ }
   #indexMain #indexMainDivUno {
     background-color: #F2DDD0;
-    grid-area: div; }
+    grid-area: div;
+    align-items: center; }
     #indexMain #indexMainDivUno .carousel, #indexMain #indexMainDivUno .carousel-inner, #indexMain #indexMainDivUno .item, #indexMain #indexMainDivUno .img, #indexMain #indexMainDivUno .carouselExampleControlsNoTouching {
       height: 100%;
       align-items: center;
@@ -405,23 +414,25 @@ footer {
       align-content: center;
       text-align: center;
       padding: 2%;
-      object-fit: cover; }
+      background-position: bottom;
+      border-radius: 5px; }
   #indexMain #sectionUno {
     background-color: #F2DDD0;
     grid-area: section;
     padding: 6%;
     text-align: center; }
-  #indexMain .texto_cuerpo, #indexMain .texto_titulo, #indexMain #galeriaMain h2, #galeriaMain #indexMain h2, #indexMain .texto_resaltado, #indexMain #nosotrosMain section .texto_titulo2, #nosotrosMain section #indexMain .texto_titulo2, #indexMain #nosotrosMain section .texto_cuerpo2, #nosotrosMain section #indexMain .texto_cuerpo2, #indexMain #contactanosMain h2, #contactanosMain #indexMain h2 {
-    font-size: 3vh;
+  #indexMain .texto_cuerpo, #indexMain .texto_titulo, #indexMain .texto_resaltado, #indexMain #galeriaMain h2, #galeriaMain #indexMain h2, #indexMain #contactanosMain h2, #contactanosMain #indexMain h2 {
+    font-size: 2.5vh;
     font-weight: 200;
     font-family: 'Arvo', serif;
     text-align: center;
     margin: 10px; }
-  #indexMain .texto_titulo, #indexMain #galeriaMain h2, #galeriaMain #indexMain h2 {
-    font-size: 4.5vh;
-    font-weight: 700; }
-  #indexMain .texto_resaltado {
+  #indexMain .texto_titulo {
     font-size: 3vh;
+    font-weight: 700;
+    padding: 5px; }
+  #indexMain .texto_resaltado {
+    font-size: 2.6vh;
     font-weight: 700; }
   #indexMain #articleUno {
     background-color: #F2DDD0;
@@ -441,20 +452,24 @@ footer {
   #chatW img {
     width: 7vh;
     position: sticky; }
+  #chatW:hover {
+    transition: all 400ms ease-out;
+    transform: scale(1.3);
+    filter: saturate(150%); }
 
 /*Media Qery Main Index*/
 @media only screen and (max-width: 468px) {
   #indexMain {
-    height: 1375px;
-    grid-template-rows: 300px 450px 300px;
+    height: 1200px;
+    grid-template-rows: 400px 440px 300px;
     grid-template-columns: 100%;
-    gap: 0.5rem;
+    gap: 1rem;
     grid-template-areas: "div" "section" "article"; } }
 
 @media only screen and (min-width: 468px) {
   #indexMain {
-    height: 1000px;
-    grid-template-rows: 300px 400px 300px;
+    height: 1200px;
+    grid-template-rows: 400px 440px 300px;
     grid-template-columns: 100%;
     gap: 0.2rem;
     grid-template-areas: "div" "section" "article"; }
@@ -463,8 +478,8 @@ footer {
 
 @media only screen and (min-width: 600px) {
   #indexMain {
-    height: 1100px;
-    grid-template-rows: 350px 430px 300px;
+    height: 1200px;
+    grid-template-rows: 470px 370px 300px;
     grid-template-columns: 100%;
     gap: 0.2rem;
     grid-template-areas: "div" "section" "article"; } }
@@ -479,8 +494,8 @@ footer {
 
 @media only screen and (min-width: 992px) {
   #indexMain {
-    height: 1172px;
-    grid-template-rows: 750px 350px;
+    height: 1292px;
+    grid-template-rows: 800px 450px;
     grid-template-columns: 50% 50%;
     gap: 0.5rem;
     grid-template-areas: "div div" "section article"; } }
@@ -497,11 +512,22 @@ footer {
     background-color: #F2F2F2;
     grid-area: section;
     padding: 5%; }
-    #nosotrosMain section .texto_cuerpo2 {
-      text-align: justify; }
+    #nosotrosMain section #titulo_nosotros {
+      font-family: 'Arvo', serif;
+      text-align: center;
+      margin: 10px;
+      text-align: center; }
+  #nosotrosMain #cuerpo_nosotros {
+    font-family: 'Arvo', serif;
+    text-align: center;
+    margin: 10px;
+    text-align: justify; }
   #nosotrosMain #imgMur {
     height: 100%;
     width: 95%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 1px 10px 10px rgba(129, 129, 129, 0.288);
     grid-area: imgMur; }
   #nosotrosMain #nosotrosMainDiv {
     border: solid,2px,blue;
@@ -640,20 +666,20 @@ footer {
 
 @media only screen and (min-width: 992px) {
   #nosotrosMain {
-    height: 930px;
-    grid-template-rows: 450px 450px;
+    height: 1000px;
+    grid-template-rows: 470px 470px;
     grid-template-columns: 50% 50%;
     gap: 0.5rem;
     grid-template-areas: "section imgMur" "div div"; }
     #nosotrosMain section {
       height: 295px;
       width: 100%; }
-      #nosotrosMain section .texto_titulo2 {
+      #nosotrosMain section #titulo_nosotros {
         font-weight: 800;
         font-size: 4vh; }
-      #nosotrosMain section .texto_cuerpo2 {
+      #nosotrosMain section #cuerpo_nosotros {
         font-weight: 500;
-        font-size: 2.2vh; }
+        font-size: 2.3vh; }
     #nosotrosMain #imgMur {
       width: 100%;
       height: 100%;
@@ -661,9 +687,9 @@ footer {
       align-self: center;
       background-position: center;
       padding: 1%; }
-    #nosotrosMain #nosotrosMainDiv iframe {
+    #nosotrosMain #nosotrosMainDiv {
       height: 520px;
-      width: 99%;
+      width: 820;
       text-align: center;
       align-items: center;
       align-content: center;
@@ -677,81 +703,295 @@ footer {
   display: grid;
   width: 100%; }
   #serviciosMain #serviciosMainDivDos {
-    display: grid; }
-    #serviciosMain #serviciosMainDivDos #servSocial {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #serviciosMain #serviciosMainDivDos #accordionExample {
+      display: flex;
+      flex-direction: column;
+      width: 95%;
+      justify-content: center;
+      gap: 5px;
+      margin: 8px;
+      margin-top: 5px;
+      margin-bottom: 5px; }
+    #serviciosMain #serviciosMainDivDos .accordion-body p {
+      font-family: 'Arvo', serif; }
+    #serviciosMain #serviciosMainDivDos .servContain {
+      display: flex;
       font-family: 'Arvo', serif;
-      background-color: #559b9b;
-      grid-area: eventos; }
-    #serviciosMain #serviciosMainDivDos #servComercial {
+      background-image: url("../img/multimedia/galeria/img5.jpg");
+      background-position: center;
+      filter: blur(2px);
+      -webkit-filter: blur(0.4px);
+      background-size: cover;
+      background-repeat: no-repeat;
+      grid-area: eventos;
+      z-index: 0;
+      width: 100%;
+      transition: all 500ms ease;
+      border-radius: 5px;
+      box-shadow: 1px 10px 10px rgba(129, 129, 129, 0.288);
+      position: relative; }
+      #serviciosMain #serviciosMainDivDos .servContain p {
+        display: flex;
+        color: white;
+        background-color: black;
+        background-color: rgba(0, 0, 0, 0.3);
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        outline: 8px double white;
+        font-weight: bold; }
+    #serviciosMain #serviciosMainDivDos .servContain2 {
       font-family: 'Arvo', serif;
-      background-color: #559b9b;
-      grid-area: comercial; }
-    #serviciosMain #serviciosMainDivDos #servProductos {
+      background-image: url("../img/multimedia/galeria/img8.jpeg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      grid-area: comercial;
+      z-index: 0;
+      width: 100%;
+      transition: all 500ms ease;
+      border-radius: 5px;
+      box-shadow: 1px 10px 10px rgba(129, 129, 129, 0.288);
+      overflow: hidden; }
+      #serviciosMain #serviciosMainDivDos .servContain2 p {
+        display: flex;
+        color: white;
+        background-color: black;
+        background-color: rgba(0, 0, 0, 0.3);
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        outline: 8px double white;
+        font-weight: bold; }
+    #serviciosMain #serviciosMainDivDos .servContain3 {
       font-family: 'Arvo', serif;
-      background-color: #559b9b;
-      grid-area: productos; }
-    #serviciosMain #serviciosMainDivDos #servMultimedia {
+      background-image: url(../img/multimedia/galeria/img13.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      grid-area: productos;
+      z-index: 0;
+      width: 100%;
+      transition: all 500ms ease;
+      border-radius: 5px;
+      box-shadow: 1px 10px 10px rgba(129, 129, 129, 0.288);
+      overflow: hidden; }
+      #serviciosMain #serviciosMainDivDos .servContain3 p {
+        display: flex;
+        color: white;
+        background-color: black;
+        background-color: rgba(0, 0, 0, 0.3);
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        outline: 8px double white;
+        font-weight: bold; }
+    #serviciosMain #serviciosMainDivDos .servContain4 {
       font-family: 'Arvo', serif;
-      background-color: #559b9b;
-      grid-area: otros; }
+      background-image: url(../img/multimedia/galeria/img12.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      grid-area: productos;
+      z-index: 0;
+      width: 100%;
+      transition: all 500ms ease;
+      border-radius: 5px;
+      box-shadow: 1px 10px 10px rgba(129, 129, 129, 0.288);
+      overflow: hidden; }
+      #serviciosMain #serviciosMainDivDos .servContain4 p {
+        display: flex;
+        color: white;
+        background-color: black;
+        background-color: rgba(0, 0, 0, 0.3);
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+        outline: 8px double white;
+        font-weight: bold; }
 
 /*Media Qery Main Servicios*/
 @media only screen and (max-width: 468px) {
-  #serviciosMainDivDos {
-    height: auto;
-    grid-template-rows: 460px 460px 460px 460px;
-    grid-template-columns: 100%;
-    gap: 0.2rem;
-    grid-template-areas: "eventos" "comercial" "productos" "multimedia";
-    padding: 20px; } }
+  #serviciosMainDivDos .servContain p {
+    height: 150px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain:hover {
+    transform: scale(1.07); }
+  #serviciosMainDivDos .servContain2 p {
+    height: 150px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain2:hover {
+    transform: scale(1.07); }
+  #serviciosMainDivDos .servContain3 p {
+    height: 150px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain3:hover {
+    transform: scale(1.07); }
+  #serviciosMainDivDos .servContain4 p {
+    height: 150px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain4:hover {
+    transform: scale(1.07); } }
 
 @media only screen and (min-width: 468px) {
-  #serviciosMainDivDos {
-    height: auto;
-    grid-template-rows: 535px 520px 510px 510px;
-    grid-template-columns: 100%;
-    gap: 0.2rem;
-    grid-template-areas: "eventos" "comercial" "productos" "otros";
-    padding: 20px;
-    justify-content: center; } }
+  #serviciosMainDivDos .servContain p {
+    height: 150px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain:hover {
+    transform: scale(1.07); }
+  #serviciosMainDivDos .servContain2 p {
+    height: 150px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain2:hover {
+    transform: scale(1.07); }
+  #serviciosMainDivDos .servContain3 p {
+    height: 150px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain3:hover {
+    transform: scale(1.07); }
+  #serviciosMainDivDos .servContain4 p {
+    height: 150px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain4:hover {
+    transform: scale(1.07); } }
 
 @media only screen and (min-width: 600px) {
-  #serviciosMainDivDos {
-    height: auto;
-    grid-template-rows: 535px 550px 520px 520px;
-    grid-template-columns: 100%;
-    gap: 0.2rem;
-    grid-template-areas: "eventos" "comercial" "productos" "otros";
-    padding: 20px;
-    justify-content: center;
-    align-content: center;
-    margin: 5px; } }
+  #serviciosMainDivDos .servContain p {
+    height: 200px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain:hover {
+    transform: scale(1.07); }
+  #serviciosMainDivDos .servContain2 p {
+    height: 200px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain2:hover {
+    transform: scale(1.07); }
+  #serviciosMainDivDos .servContain3 p {
+    height: 200px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain3:hover {
+    transform: scale(1.07); }
+  #serviciosMainDivDos .servContain4 p {
+    height: 200px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain4:hover {
+    transform: scale(1.07); } }
 
 @media only screen and (min-width: 768px) {
-  #serviciosMainDivDos {
-    height: auto;
-    grid-template-rows: 260px 260px;
-    grid-template-columns: 49% 49%;
-    gap: 0.2rem;
-    grid-template-areas: "eventos comercial" "productos otros";
-    padding: 15px;
-    margin: 5px;
-    justify-content: center;
-    align-content: center; } }
+  #serviciosMainDivDos .servContain p {
+    height: 210px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain:hover {
+    transform: scale(1.07); }
+  #serviciosMainDivDos .servContain2 p {
+    height: 210px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain2:hover {
+    transform: scale(1.07); }
+  #serviciosMainDivDos .servContain3 p {
+    height: 210px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain3:hover {
+    transform: scale(1.07); }
+  #serviciosMainDivDos .servContain4 p {
+    height: 210px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain4:hover {
+    transform: scale(1.07); } }
 
 @media only screen and (min-width: 992px) {
-  #serviciosMainDivDos {
-    height: auto;
-    grid-template-rows: 260px 260px;
-    grid-template-columns: 49% 49%;
-    gap: 0.2rem;
-    grid-template-areas: "eventos comercial" "productos otros";
-    padding: 20px; } }
+  #serviciosMainDivDos .servContain p {
+    height: 210px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain:hover {
+    transform: scale(1.07); }
+  #serviciosMainDivDos .servContain2 p {
+    height: 210px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain2:hover {
+    transform: scale(1.07); }
+  #serviciosMainDivDos .servContain3 p {
+    height: 210px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain3:hover {
+    transform: scale(1.07); }
+  #serviciosMainDivDos .servContain4 p {
+    height: 210px;
+    width: 100%;
+    font-size: 35px;
+    padding: 2px;
+    outline-offset: -20px; }
+  #serviciosMainDivDos .servContain4:hover {
+    transform: scale(1.07); } }
 
 /* MAIN GALERIA*/
 #galeriaMain h2 {
   padding: 0.8em 0 .4em;
-  text-align: center; }
+  text-align: center;
+  font-size: 4.5vh;
+  font-weight: 600;
+  padding: 5px;
+  margin-top: 15px; }
 
 #galeriaMain .gallery {
   padding-bottom: 3em;
@@ -874,8 +1114,12 @@ footer {
   align-self: center;
   padding: 11px; }
   #contactanosMain h2 {
-    padding-top: 2rem;
-    font-weight: 600; }
+    padding: 0.8em 0 .4em;
+    text-align: center;
+    font-size: 3.5vh;
+    font-weight: 600;
+    padding: 5px;
+    margin-top: 15px; }
   #contactanosMain section form {
     display: flex;
     flex-direction: column;
@@ -887,31 +1131,38 @@ footer {
       padding: 5px; }
     #contactanosMain section form #nombreDos {
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #BF9F93; }
+      background-color: #BF9F93;
+      box-shadow: 1px 10px 10px rgba(129, 129, 129, 0.288); }
     #contactanosMain section form #emailUno {
       font-family: Arial, Helvetica, sans-serif; }
     #contactanosMain section form #emailDos {
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #BF9F93; }
+      background-color: #BF9F93;
+      box-shadow: 1px 10px 10px rgba(129, 129, 129, 0.288); }
     #contactanosMain section form #telefonoUno {
       font-family: Arial, Helvetica, sans-serif; }
     #contactanosMain section form #telefonoDos {
       font-family: Arial, Helvetica, sans-serif;
       background-color: #BF9F93;
-      left: 10px; }
+      left: 10px;
+      box-shadow: 1px 10px 10px rgba(129, 129, 129, 0.288); }
     #contactanosMain section form textarea {
       font-family: Arial, Helvetica, sans-serif;
       line-height: 40px;
       background-color: #BF9F93;
       left: 10px;
       border: 2px,orange;
-      margin-right: 10px; }
+      margin-right: 10px;
+      box-shadow: 1px 10px 10px rgba(129, 129, 129, 0.288);
+      margin-top: 15px; }
     #contactanosMain section form #botonSend, #contactanosMain section form #botonReset {
+      font-size: 25px;
       font-weight: 2px;
       margin: 2%;
       padding: 5px;
       border: solid, 2px;
-      background-color: #BF9F93; }
+      background-color: #BF9F93;
+      box-shadow: 1px 10px 10px rgba(129, 129, 129, 0.288); }
     #contactanosMain section form #nombreDos:focus {
       height: 30px;
       width: 280px;
@@ -926,14 +1177,89 @@ footer {
       background-color: #bf9f93bd; }
     #contactanosMain section form textarea:focus {
       background-color: #bf9f93bd; }
-
-@media only screen and (max-width: 468px) {
-  #contactanosMain {
-    height: 1100px h2;
-      height-grid-area: h2; }
-    #contactanosMain .nombre__Uno {
-      display: flex;
-      flex-direction: row; }
+  @media only screen and (max-width: 468px) {
+    #contactanosMain #contactanosMain {
+      height: 1100px; }
+      #contactanosMain #contactanosMain #nombreUno {
+        font-size: 20px;
+        line-height: 40px;
+        padding: 8px; }
+      #contactanosMain #contactanosMain #nombreDos {
+        font-size: 20px;
+        line-height: 40px;
+        padding: 10px;
+        height: 25px;
+        width: 260px;
+        transition: all 1s; }
+      #contactanosMain #contactanosMain #emailUno {
+        font-size: 20px;
+        line-height: 40px;
+        padding: 10px; }
+      #contactanosMain #contactanosMain #emailDos {
+        height: 25px;
+        width: 250px;
+        font-size: 20px;
+        line-height: 40px;
+        padding: 10px;
+        transition: all 1s; }
+      #contactanosMain #contactanosMain #telefonoUno {
+        font-size: 20px;
+        line-height: 40px;
+        padding: 10px; }
+      #contactanosMain #contactanosMain #telefonoDos {
+        height: 25px;
+        width: 250px;
+        font-size: 20px;
+        line-height: 40px;
+        padding: 10px;
+        transition: all 1s; }
+      #contactanosMain #contactanosMain textarea {
+        font-size: 20px;
+        padding: 10px;
+        height: 350px;
+        width: 400px;
+        transition: all 1s; } }
+  @media only screen and (min-width: 468px) {
+    #contactanosMain #nombreUno {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px; }
+    #contactanosMain #nombreDos {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px;
+      height: 25px;
+      width: 250px;
+      transition: all 1s; }
+    #contactanosMain #emailUno {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px; }
+    #contactanosMain #emailDos {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px;
+      height: 25px;
+      width: 250px;
+      transition: all 1s; }
+    #contactanosMain #telefonoUno {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px; }
+    #contactanosMain #telefonoDos {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px;
+      height: 25px;
+      width: 250px;
+      transition: all 1s; }
+    #contactanosMain textarea {
+      font-size: 20px;
+      padding: 10px;
+      height: 300px;
+      width: 200px;
+      transition: all 1s; } }
+  @media only screen and (min-width: 600px) {
     #contactanosMain #nombreUno {
       font-size: 20px;
       line-height: 40px;
@@ -942,248 +1268,163 @@ footer {
       font-size: 20px;
       line-height: 40px;
       padding: 10px;
-      height: 50px;
-      width: 260px;
+      height: 25px;
+      width: 250px;
       transition: all 1s; }
     #contactanosMain #emailUno {
       font-size: 20px;
       line-height: 40px;
-      padding: 10px;
-      grid-area: emailUno; }
+      padding: 10px; }
     #contactanosMain #emailDos {
-      height: 25px;
-      width: 250px;
       font-size: 20px;
       line-height: 40px;
       padding: 10px;
+      height: 25px;
+      width: 250px;
       transition: all 1s; }
     #contactanosMain #telefonoUno {
       font-size: 20px;
       line-height: 40px;
       padding: 10px; }
     #contactanosMain #telefonoDos {
-      height: 25px;
-      width: 250px;
       font-size: 20px;
       line-height: 40px;
       padding: 10px;
+      height: 25px;
+      width: 250px;
       transition: all 1s; }
     #contactanosMain textarea {
       font-size: 20px;
       padding: 10px;
       height: 350px;
-      width: 400px;
-      transition: all 1s; } }
-
-@media only screen and (min-width: 468px) {
-  #nombreUno {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 8px; }
-  #nombreDos {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px;
-    height: 25px;
-    width: 250px;
-    transition: all 1s; }
-  #emailUno {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px; }
-  #emailDos {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px;
-    height: 25px;
-    width: 250px;
-    transition: all 1s; }
-  #telefonoUno {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px; }
-  #telefonoDos {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px;
-    height: 25px;
-    width: 250px;
-    transition: all 1s; }
-  textarea {
-    font-size: 20px;
-    padding: 10px;
-    height: 300px;
-    width: 200px;
-    transition: all 1s; } }
-
-@media only screen and (min-width: 600px) {
-  #nombreUno {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 8px; }
-  #nombreDos {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px;
-    height: 25px;
-    width: 250px;
-    transition: all 1s; }
-  #emailUno {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px; }
-  #emailDos {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px;
-    height: 25px;
-    width: 250px;
-    transition: all 1s; }
-  #telefonoUno {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px; }
-  #telefonoDos {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px;
-    height: 25px;
-    width: 250px;
-    transition: all 1s; }
-  textarea {
-    font-size: 20px;
-    padding: 10px;
-    height: 350px;
-    width: 400px; } }
-
-@media only screen and (min-width: 768px) {
-  #contactanosMain {
-    flex-direction: column; }
-  .nombre__Uno {
-    display: flex;
-    flex-direction: row;
-    height: 45px; }
-  #nombreUno {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 8px;
-    width: 250px;
-    align-items: center;
-    justify-content: end; }
-  #nombreDos {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px;
-    height: 40px;
-    width: 250px;
-    transition: all 1s;
-    justify-content: flex-start; }
-  .email__Uno {
-    display: flex;
-    flex-direction: row;
-    height: 45px; }
-  #emailUno {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 8px;
-    width: 250px;
-    align-items: center;
-    justify-content: end; }
-  #emailDos {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px;
-    height: 40px;
-    width: 250px;
-    transition: all 1s;
-    justify-content: flex-start; }
-  .tel__Uno {
-    display: flex;
-    flex-direction: row;
-    height: 45px; }
-  #telefonoUno {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 8px;
-    width: 250px;
-    align-items: center;
-    justify-content: end; }
-  #telefonoDos {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px;
-    height: 40px;
-    width: 250px;
-    transition: all 1s;
-    justify-content: flex-start; }
-  textarea {
-    font-size: 20px;
-    padding: 10px;
-    height: 350px;
-    width: 350px; } }
-
-@media only screen and (min-width: 992px) {
-  #contactanosMain {
-    flex-direction: column; }
-  .nombre__Uno {
-    display: flex;
-    flex-direction: row;
-    height: 45px; }
-  #nombreUno {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 8px;
-    width: 250px;
-    align-items: center;
-    justify-content: end; }
-  #nombreDos {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px;
-    height: 40px;
-    width: 250px;
-    transition: all 500ms;
-    justify-content: flex-start; }
-  .email__Uno {
-    display: flex;
-    flex-direction: row;
-    height: 45px; }
-  #emailUno {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 8px;
-    width: 250px;
-    align-items: center;
-    justify-content: end; }
-  #emailDos {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px;
-    height: 40px;
-    width: 250px;
-    transition: all 1s;
-    justify-content: flex-start; }
-  .tel__Uno {
-    display: flex;
-    flex-direction: row;
-    height: 45px; }
-  #telefonoUno {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 8px;
-    width: 250px;
-    align-items: center;
-    justify-content: end; }
-  #telefonoDos {
-    font-size: 20px;
-    line-height: 40px;
-    padding: 10px;
-    height: 40px;
-    width: 250px;
-    transition: all 1s;
-    justify-content: flex-start; }
-  textarea {
-    font-size: 20px;
-    padding: 10px;
-    height: 350px;
-    width: 350px; } }
+      width: 400px; } }
+  @media only screen and (min-width: 768px) {
+    #contactanosMain #contactanosMain {
+      flex-direction: column; }
+    #contactanosMain .nombre__Uno {
+      display: flex;
+      flex-direction: row;
+      height: 45px; }
+    #contactanosMain #nombreUno {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 8px;
+      width: 250px;
+      align-items: center;
+      justify-content: end; }
+    #contactanosMain #nombreDos {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px;
+      height: 40px;
+      width: 250px;
+      transition: all 1s;
+      justify-content: flex-start; }
+    #contactanosMain .email__Uno {
+      display: flex;
+      flex-direction: row;
+      height: 45px; }
+    #contactanosMain #emailUno {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 8px;
+      width: 250px;
+      align-items: center;
+      justify-content: end; }
+    #contactanosMain #emailDos {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px;
+      height: 40px;
+      width: 250px;
+      transition: all 1s;
+      justify-content: flex-start; }
+    #contactanosMain .tel__Uno {
+      display: flex;
+      flex-direction: row;
+      height: 45px; }
+    #contactanosMain #telefonoUno {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 8px;
+      width: 250px;
+      align-items: center;
+      justify-content: end; }
+    #contactanosMain #telefonoDos {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px;
+      height: 40px;
+      width: 250px;
+      transition: all 1s;
+      justify-content: flex-start; }
+    #contactanosMain textarea {
+      font-size: 20px;
+      padding: 10px;
+      height: 350px;
+      width: 350px; } }
+  @media only screen and (min-width: 992px) {
+    #contactanosMain #contactanosMain {
+      flex-direction: column; }
+    #contactanosMain .nombre__Uno {
+      display: flex;
+      flex-direction: row;
+      height: 45px; }
+    #contactanosMain #nombreUno {
+      font-size: 25px;
+      line-height: 40px;
+      padding: 8px;
+      width: 250px;
+      align-items: center;
+      justify-content: end; }
+    #contactanosMain #nombreDos {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px;
+      height: 40px;
+      width: 250px;
+      transition: all 500ms;
+      justify-content: flex-start; }
+    #contactanosMain #emailUno {
+      font-size: 25px;
+      line-height: 40px;
+      padding: 8px;
+      width: 250px;
+      align-items: center;
+      justify-content: end; }
+    #contactanosMain #emailDos {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px;
+      height: 40px;
+      width: 250px;
+      transition: all 1s;
+      justify-content: flex-start; }
+    #contactanosMain #telefonoUno {
+      font-size: 25px;
+      line-height: 40px;
+      padding: 8px;
+      width: 250px;
+      align-items: center;
+      justify-content: end; }
+    #contactanosMain #telefonoDos {
+      font-size: 20px;
+      line-height: 40px;
+      padding: 10px;
+      height: 40px;
+      width: 250px;
+      transition: all 1s;
+      justify-content: flex-start; }
+    #contactanosMain textarea {
+      font-size: 20px;
+      padding: 10px;
+      height: 350px;
+      width: 700px; }
+    #contactanosMain #consulta {
+      width: 500px;
+      font-size: 20px;
+      line-height: 40px;
+      padding: 8px;
+      width: 250px;
+      align-items: center;
+      justify-content: end; } }

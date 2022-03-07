@@ -4,6 +4,20 @@
     display: grid;
     background-color:$colorFooter;
     
+    #faceFoot, #instaFoot, #twitFoot{
+        transition: all 500ms ease-out;
+        
+    
+        &:hover{
+        transform: scale(1.2); 
+        filter: saturate(400%);
+        }
+        :active{
+            transform: scale(1.3)
+
+        }
+        }   
+    
     #footerUno{
         h3, h4{font-family: $fontFooter; color: darkgray;
         }
@@ -56,9 +70,12 @@
                             "footCinco" ;
         gap: 2px;                   
         #faceFoot, #instaFoot, #twitFoot{
-            @include mixinIconosCuatro(65px,65px)
-                                 
-        }
+            @include mixinIconosCuatro(65px,65px);
+            transition: all 500ms ease-out;
+            
+            
+        }   
+        
         #footerUno{
             grid-area: footUno;
             font-family: monospace;color: black;
